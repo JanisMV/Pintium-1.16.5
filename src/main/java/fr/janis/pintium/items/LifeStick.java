@@ -1,14 +1,15 @@
 package fr.janis.pintium.items;
 
-import fr.janis.pintium.gui.SpellsGui;
-import fr.janis.pintium.gui.TameMobs;
+import fr.janis.pintium.data.CapabilityEntityKilled;
+import fr.janis.pintium.init.PintiumEntities;
+import fr.janis.pintium.init.PintiumItems;
+import fr.janis.pintium.main;
 import fr.janis.pintium.network.Network;
 import fr.janis.pintium.network.packet.TameRatelPacket;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.client.util.InputMappings;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ActionResult;
@@ -38,8 +39,19 @@ public class LifeStick extends Item {
 
     @Override
     public ActionResult<ItemStack> onItemRightClick(World worldIn, PlayerEntity playerIn, Hand handIn) {
-
-        Minecraft.getInstance().displayGuiScreen(new TameMobs());
+        playerIn.getCapability(CapabilityEntityKilled.ENTITY_KILLED_CAPABILITY).ifPresent(h -> {
+            main.LOGGER.debug(h.getName());
+            if (h.getName() != null){
+                if (h.getName().equals(PintiumEntities.RATEL.get().getName().getString()))
+                {
+                    if (playerIn.inventory.hasItemStack(new ItemStack(PintiumItems.HEAL_ORB.get()))) {
+                        playerIn.inventory.deleteStack(new ItemStack(PintiumItems.HEAL_ORB.get()));
+                        Network.CHANNEL.sendToServer(new TameRatelPacket());
+                        h.setName(null);
+                    }
+                }
+            }
+        });
 
         return ActionResult.resultSuccess(playerIn.getHeldItem(handIn));
     }

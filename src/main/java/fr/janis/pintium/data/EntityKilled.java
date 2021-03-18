@@ -11,6 +11,6 @@ public class EntityKilled implements IEntityKilled{
 
     @Override
     public String getName() {
-        return this.name;
+        return name;
     }
 }

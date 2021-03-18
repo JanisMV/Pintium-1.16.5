@@ -23,14 +23,18 @@ public class CapabilityEntityKilled {
         @Override
         public INBT writeNBT(Capability<IEntityKilled> capability, IEntityKilled instance, Direction side) {
             CompoundNBT tag = new CompoundNBT();
-            tag.putString("name_entity_killed", instance.getName());
+            if (instance.getName() != null){
+                tag.putString("name", instance.getName());
+            }
             return tag;
         }
 
         @Override
         public void readNBT(Capability<IEntityKilled> capability, IEntityKilled instance, Direction side, INBT nbt) {
-            String name = ((CompoundNBT) nbt).getString("name_entity_killed");
-            instance.setName(name);
+            String name = ((CompoundNBT) nbt).getString("name");
+            if (!name.isEmpty()){
+                instance.setName(name);
+            }
         }
     }
 }

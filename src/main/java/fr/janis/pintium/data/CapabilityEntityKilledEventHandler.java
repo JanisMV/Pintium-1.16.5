@@ -14,6 +14,8 @@ public class CapabilityEntityKilledEventHandler {
             EntityKilledProvider provider = new EntityKilledProvider();
             e.addCapability(new ResourceLocation(main.MODID, "name"), provider);
             e.addListener(provider::invalidate);
+
+            main.LOGGER.debug("Ready");
         }
     }
 }
