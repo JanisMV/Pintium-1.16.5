@@ -5,7 +5,9 @@ import fr.janis.pintium.init.PintiumEntities;
 import fr.janis.pintium.init.PintiumItems;
 import fr.janis.pintium.main;
 import fr.janis.pintium.network.Network;
+import fr.janis.pintium.network.packet.TameCreeperPacket;
 import fr.janis.pintium.network.packet.TameRatelPacket;
+import fr.janis.pintium.network.packet.TameSkeletonPacket;
 import fr.janis.pintium.network.packet.TameZombiePacket;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.util.ITooltipFlag;
@@ -59,6 +61,24 @@ public class LifeStick extends Item {
                         playerIn.inventory.deleteStack(new ItemStack(PintiumItems.HEAL_ORB.get()));
 
                         Network.CHANNEL.sendToServer(new TameZombiePacket());
+                        h.setName(null);
+                    }
+                }
+
+                else if (h.getName().equals(EntityType.SKELETON.getName().getString())){
+                    if (playerIn.inventory.hasItemStack(new ItemStack(PintiumItems.HEAL_ORB.get()))){
+                        playerIn.inventory.deleteStack(new ItemStack(PintiumItems.HEAL_ORB.get()));
+
+                        Network.CHANNEL.sendToServer(new TameSkeletonPacket());
+                        h.setName(null);
+                    }
+                }
+                
+                else if (h.getName().equals(EntityType.CREEPER.getName().getString())){
+                    if (playerIn.inventory.hasItemStack(new ItemStack(PintiumItems.HEAL_ORB.get()))){
+                        playerIn.inventory.deleteStack(new ItemStack(PintiumItems.HEAL_ORB.get()));
+
+                        Network.CHANNEL.sendToServer(new TameCreeperPacket());
                         h.setName(null);
                     }
                 }

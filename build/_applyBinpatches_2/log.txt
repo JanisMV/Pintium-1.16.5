@@ -1,15 +1,15 @@
-Args: "--clean", "C:\Users\Win10\.gradle\caches\forge_gradle\mcp_repo\net\minecraft\joined\1.16.5-20210115.111550\joined-1.16.5-20210115.111550-srg.jar", "--output", "C:\Users\Win10\Desktop\Pintium\build\fg_cache\net\minecraftforge\forge\1.16.5-36.0.54\forge-1.16.5-36.0.54-binpatched.jar", "--apply", "C:\Users\Win10\Desktop\Pintium\build\fg_cache\net\minecraftforge\forge\1.16.5-36.0.54\forge-1.16.5-36.0.54-binpatches.lzma"
+Args: "--clean", "C:\Users\Win10\.gradle\caches\forge_gradle\mcp_repo\net\minecraft\joined\1.16.5-20210115.111550\joined-1.16.5-20210115.111550-srg.jar", "--output", "C:\Users\Win10\.gradle\caches\forge_gradle\minecraft_user_repo\net\minecraftforge\forge\1.16.5-36.1.0\forge-1.16.5-36.1.0-binpatched.jar", "--apply", "C:\Users\Win10\.gradle\caches\forge_gradle\minecraft_user_repo\net\minecraftforge\forge\1.16.5-36.1.0\forge-1.16.5-36.1.0-binpatches.lzma"
 Classpath: C:\Users\Win10\.gradle\caches\forge_gradle\maven_downloader\net\minecraftforge\binarypatcher\1.0.12\binarypatcher-1.0.12-fatjar.jar
 WorkDir: C:\Users\Win10\Desktop\Pintium\build\_applyBinpatches_2
 Main: net.minecraftforge.binarypatcher.ConsoleTool
 ====================================
 Applying: 
   Clean:     C:\Users\Win10\.gradle\caches\forge_gradle\mcp_repo\net\minecraft\joined\1.16.5-20210115.111550\joined-1.16.5-20210115.111550-srg.jar
-  Output:    C:\Users\Win10\Desktop\Pintium\build\fg_cache\net\minecraftforge\forge\1.16.5-36.0.54\forge-1.16.5-36.0.54-binpatched.jar
+  Output:    C:\Users\Win10\.gradle\caches\forge_gradle\minecraft_user_repo\net\minecraftforge\forge\1.16.5-36.1.0\forge-1.16.5-36.1.0-binpatched.jar
   KeepData:  false
   Unpatched: false
-  Patches:   C:\Users\Win10\Desktop\Pintium\build\fg_cache\net\minecraftforge\forge\1.16.5-36.0.54\forge-1.16.5-36.0.54-binpatches.lzma
-Loading patches file: C:\Users\Win10\Desktop\Pintium\build\fg_cache\net\minecraftforge\forge\1.16.5-36.0.54\forge-1.16.5-36.0.54-binpatches.lzma
+  Patches:   C:\Users\Win10\.gradle\caches\forge_gradle\minecraft_user_repo\net\minecraftforge\forge\1.16.5-36.1.0\forge-1.16.5-36.1.0-binpatches.lzma
+Loading patches file: C:\Users\Win10\.gradle\caches\forge_gradle\minecraft_user_repo\net\minecraftforge\forge\1.16.5-36.1.0\forge-1.16.5-36.1.0-binpatches.lzma
   Reading patch com.mojang.blaze3d.platform.GlStateManager$1.binpatch
     Checksum: 37bccb56 Exists: true
   Reading patch com.mojang.blaze3d.platform.GlStateManager$AlphaState.binpatch
@@ -546,6 +546,10 @@ Loading patches file: C:\Users\Win10\Desktop\Pintium\build\fg_cache\net\minecraf
     Checksum: 88b51ea4 Exists: true
   Reading patch net.minecraft.client.renderer.ActiveRenderInfo.binpatch
     Checksum: 35169c48 Exists: true
+  Reading patch net.minecraft.client.renderer.Atlases$1.binpatch
+    Checksum: 48ead875 Exists: true
+  Reading patch net.minecraft.client.renderer.Atlases.binpatch
+    Checksum: 8cd4a2f9 Exists: true
   Reading patch net.minecraft.client.renderer.BlockModelRenderer$1.binpatch
     Checksum: 45bfe76c Exists: true
   Reading patch net.minecraft.client.renderer.BlockModelRenderer$AmbientOcclusionFace.binpatch
@@ -758,6 +762,10 @@ Loading patches file: C:\Users\Win10\Desktop\Pintium\build\fg_cache\net\minecraf
     Checksum: 172bcf48 Exists: true
   Reading patch net.minecraft.client.renderer.tileentity.PistonTileEntityRenderer.binpatch
     Checksum: a89e294 Exists: true
+  Reading patch net.minecraft.client.renderer.tileentity.SignTileEntityRenderer$SignModel.binpatch
+    Checksum: 21454f8d Exists: true
+  Reading patch net.minecraft.client.renderer.tileentity.SignTileEntityRenderer.binpatch
+    Checksum: ba543231 Exists: true
   Reading patch net.minecraft.client.renderer.tileentity.TileEntityRendererDispatcher.binpatch
     Checksum: 2fc4ebfb Exists: true
   Reading patch net.minecraft.client.renderer.vertex.VertexFormat.binpatch
@@ -3086,6 +3094,7 @@ Processing: C:\Users\Win10\.gradle\caches\forge_gradle\mcp_repo\net\minecraft\jo
   Patching net/minecraft/client/gui/ResourceLoadProgressGui$MojangLogoTexture 1/1
   Patching net/minecraft/client/renderer/BlockModelRenderer$Cache$2 1/1
   Patching net/minecraft/client/renderer/BlockModelRenderer$Cache$1 1/1
+  Patching net/minecraft/client/renderer/Atlases$1 1/1
   Patching net/minecraft/server/MinecraftServer$2 1/1
   Patching net/minecraft/server/MinecraftServer$1 1/1
   Patching net/minecraft/client/renderer/texture/AtlasTexture$SheetData 1/1
@@ -3440,6 +3449,7 @@ Processing: C:\Users\Win10\.gradle\caches\forge_gradle\mcp_repo\net\minecraft\jo
   Patching net/minecraft/entity/monster/IllusionerEntity$MirrorSpellGoal 1/1
   Patching net/minecraft/entity/monster/IllusionerEntity$BlindnessSpellGoal 1/1
   Patching net/minecraft/client/renderer/chunk/ChunkRenderDispatcher 1/1
+  Patching net/minecraft/client/renderer/tileentity/SignTileEntityRenderer 1/1
   Patching net/minecraft/client/renderer/tileentity/PistonTileEntityRenderer 1/1
   Patching net/minecraft/client/renderer/tileentity/ChestTileEntityRenderer 1/1
   Patching net/minecraft/client/renderer/tileentity/TileEntityRendererDispatcher 1/1
@@ -3458,6 +3468,7 @@ Processing: C:\Users\Win10\.gradle\caches\forge_gradle\mcp_repo\net\minecraft\jo
   Patching net/minecraft/client/renderer/FluidBlockRenderer 1/1
   Patching net/minecraft/client/renderer/BlockRendererDispatcher 1/1
   Patching net/minecraft/client/renderer/BlockModelShapes 1/1
+  Patching net/minecraft/client/renderer/Atlases 1/1
   Patching net/minecraft/client/renderer/OverlayRenderer 1/1
   Patching net/minecraft/client/shader/ShaderGroup 1/1
   Patching net/minecraft/client/renderer/LightTexture 1/1
@@ -3477,6 +3488,7 @@ Processing: C:\Users\Win10\.gradle\caches\forge_gradle\mcp_repo\net\minecraft\jo
   Patching net/minecraft/client/gui/screen/CreateWorldScreen$1 1/1
   Patching net/minecraft/world/lighting/LevelBasedGraph$2 1/1
   Patching net/minecraft/world/lighting/LevelBasedGraph$1 1/1
+  Patching net/minecraft/client/renderer/tileentity/SignTileEntityRenderer$SignModel 1/1
   Patching net/minecraft/inventory/container/PlayerContainer$2 1/1
   Patching net/minecraft/inventory/container/PlayerContainer$1 1/1
   Patching net/minecraft/client/renderer/GameRenderer 1/1

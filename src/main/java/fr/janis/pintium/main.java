@@ -59,6 +59,8 @@ public class main
             GlobalEntityTypeAttributes.put(PintiumEntities.RATEL.get(), RatelEntity.setCustomAttributes().create());
             GlobalEntityTypeAttributes.put(PintiumEntities.RATEL_BODY_GUARD.get(), RatelBodyGuardEntity.setCustomAttributes().create());
             GlobalEntityTypeAttributes.put(PintiumEntities.ZOMBIE_BODY_GUARD.get(), ZombieBodyGuardEntity.setCustomAttributes().create());
+            GlobalEntityTypeAttributes.put(PintiumEntities.SKELETON_BODY_GUARD.get(), SkeletonBodyGuardEntity.setCustomAttributes().create());
+            GlobalEntityTypeAttributes.put(PintiumEntities.CREEPER_BODY_GUARD.get(), CreeperBodyGuardEntity.setCustomAttributes().create());
             GlobalEntityTypeAttributes.put(PintiumEntities.BANANOSAUR.get(), BananosaurEntity.setCustomAttributes().create());
             GlobalEntityTypeAttributes.put(PintiumEntities.TUNA.get(), TunaEntity.setCustomAttributes().create());
             GlobalEntityTypeAttributes.put(PintiumEntities.BANANOFISH.get(), BananoFishEntity.setCustomAttributes().create());

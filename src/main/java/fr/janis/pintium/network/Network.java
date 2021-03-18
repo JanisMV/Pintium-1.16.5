@@ -52,5 +52,15 @@ public class Network {
                 .decoder(TameZombiePacket::decode)
                 .consumer(TameZombiePacket::handle)
                 .add();
+        CHANNEL.messageBuilder(TameSkeletonPacket.class, 7)
+                .encoder(TameSkeletonPacket::encode)
+                .decoder(TameSkeletonPacket::decode)
+                .consumer(TameSkeletonPacket::handle)
+                .add();
+        CHANNEL.messageBuilder(TameCreeperPacket.class, 8)
+                .encoder(TameCreeperPacket::encode)
+                .decoder(TameCreeperPacket::decode)
+                .consumer(TameCreeperPacket::handle)
+                .add();
     }
 }

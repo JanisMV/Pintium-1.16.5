@@ -29,7 +29,7 @@ logoFile="pintium.png" #optional
 # A text field displayed in the mod UI
 credits="Thx to my friends and to my teacher who is the best teacher I've ever seen." #optional
 # A text field displayed in the mod UI
-authors="Janis (me)" #optional
+authors="Janis" #optional
 # The description text for the mod (multi line!) (#mandatory)
 description='''
 This mod is a mod which add a new ore with lots of new items like
@@ -48,8 +48,8 @@ Zombium : Spawn some baby zombies who are gonna attack your last attacked ennemy
 
 There is a new amazing Item :
 The Stick of Life. You will be able to tame ANY entities.
-For the moment you can only tame Ratel but in few hours you will be able
-to tame mores.
+For the moment you can only tame Ratel, Zombie, Skeleton and Creeper
+but in few hours you will be able to tame mores.
 
 To tame entities, you have to kill it, get a heal orb in your inventory and right click
 with the life stick !

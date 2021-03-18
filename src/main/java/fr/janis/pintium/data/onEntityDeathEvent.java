@@ -2,6 +2,8 @@ package fr.janis.pintium.data;
 
 import fr.janis.pintium.entities.RatelEntity;
 import fr.janis.pintium.main;
+import net.minecraft.entity.monster.CreeperEntity;
+import net.minecraft.entity.monster.SkeletonEntity;
 import net.minecraft.entity.monster.ZombieEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -23,6 +25,22 @@ public class onEntityDeathEvent {
             }
 
             else if (e.getEntityLiving() instanceof ZombieEntity)
+            {
+                p.getCapability(CapabilityEntityKilled.ENTITY_KILLED_CAPABILITY).ifPresent(h -> {
+                    h.setName(name);
+                    main.LOGGER.debug(h.getName());
+                });
+            }
+
+            else if (e.getEntityLiving() instanceof SkeletonEntity)
+            {
+                p.getCapability(CapabilityEntityKilled.ENTITY_KILLED_CAPABILITY).ifPresent(h -> {
+                    h.setName(name);
+                    main.LOGGER.debug(h.getName());
+                });
+            }
+
+            else if (e.getEntityLiving() instanceof CreeperEntity)
             {
                 p.getCapability(CapabilityEntityKilled.ENTITY_KILLED_CAPABILITY).ifPresent(h -> {
                     h.setName(name);

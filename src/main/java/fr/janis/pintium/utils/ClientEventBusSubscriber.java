@@ -7,6 +7,8 @@ import fr.janis.pintium.client.render.TunaRenderer;
 import fr.janis.pintium.init.PintiumEntities;
 import fr.janis.pintium.items.PintiumSpawnEggItem;
 import fr.janis.pintium.main;
+import net.minecraft.client.renderer.entity.CreeperRenderer;
+import net.minecraft.client.renderer.entity.SkeletonRenderer;
 import net.minecraft.client.renderer.entity.ZombieRenderer;
 import net.minecraft.entity.EntityType;
 import net.minecraftforge.api.distmarker.Dist;
@@ -24,6 +26,8 @@ public class ClientEventBusSubscriber {
         RenderingRegistry.registerEntityRenderingHandler(PintiumEntities.RATEL.get(), RatelRenderer::new);
         RenderingRegistry.registerEntityRenderingHandler(PintiumEntities.RATEL_BODY_GUARD.get(), RatelRenderer::new);
         RenderingRegistry.registerEntityRenderingHandler(PintiumEntities.ZOMBIE_BODY_GUARD.get(), ZombieRenderer::new);
+        RenderingRegistry.registerEntityRenderingHandler(PintiumEntities.SKELETON_BODY_GUARD.get(), SkeletonRenderer::new);
+        RenderingRegistry.registerEntityRenderingHandler(PintiumEntities.CREEPER_BODY_GUARD.get(), CreeperRenderer::new);
         RenderingRegistry.registerEntityRenderingHandler(PintiumEntities.BANANOSAUR.get(), BananosaurRenderer::new);
         RenderingRegistry.registerEntityRenderingHandler(PintiumEntities.TUNA.get(), TunaRenderer::new);
         RenderingRegistry.registerEntityRenderingHandler(PintiumEntities.BANANOFISH.get(), BananoFishRenderer::new);

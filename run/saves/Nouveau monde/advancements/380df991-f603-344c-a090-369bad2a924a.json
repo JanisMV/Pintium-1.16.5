@@ -1,19 +1,13 @@
 {
-  "minecraft:recipes/transportation/acacia_boat": {
+  "minecraft:recipes/decorations/campfire": {
     "criteria": {
-      "in_water": "2021-03-18 14:55:53 +0200"
+      "has_coal": "2021-03-18 15:29:39 +0200"
     },
     "done": true
   },
-  "minecraft:recipes/transportation/oak_boat": {
+  "minecraft:recipes/redstone/tnt": {
     "criteria": {
-      "in_water": "2021-03-18 14:55:53 +0200"
-    },
-    "done": true
-  },
-  "minecraft:recipes/brewing/golden_carrot": {
-    "criteria": {
-      "has_gold_nugget": "2021-03-18 14:54:50 +0200"
+      "has_gunpowder": "2021-03-18 15:47:39 +0200"
     },
     "done": true
   },
@@ -23,9 +17,9 @@
     },
     "done": true
   },
-  "minecraft:adventure/root": {
+  "minecraft:husbandry/root": {
     "criteria": {
-      "killed_something": "2021-03-18 14:54:49 +0200"
+      "consumed_item": "2021-03-18 16:12:57 +0200"
     },
     "done": true
   },
@@ -47,17 +41,50 @@
     },
     "done": true
   },
-  "minecraft:recipes/transportation/jungle_boat": {
+  "minecraft:adventure/kill_all_mobs": {
+    "criteria": {
+      "minecraft:skeleton": "2021-03-18 15:29:15 +0200",
+      "minecraft:creeper": "2021-03-18 15:47:38 +0200",
+      "minecraft:wither_skeleton": "2021-03-18 15:29:37 +0200",
+      "minecraft:zombie": "2021-03-18 14:55:07 +0200"
+    },
+    "done": false
+  },
+  "minecraft:recipes/transportation/acacia_boat": {
     "criteria": {
       "in_water": "2021-03-18 14:55:53 +0200"
     },
     "done": true
   },
-  "minecraft:adventure/kill_all_mobs": {
+  "minecraft:recipes/transportation/oak_boat": {
     "criteria": {
-      "minecraft:zombie": "2021-03-18 14:55:07 +0200"
+      "in_water": "2021-03-18 14:55:53 +0200"
     },
-    "done": false
+    "done": true
+  },
+  "minecraft:recipes/brewing/golden_carrot": {
+    "criteria": {
+      "has_gold_nugget": "2021-03-18 14:54:50 +0200"
+    },
+    "done": true
+  },
+  "minecraft:adventure/root": {
+    "criteria": {
+      "killed_something": "2021-03-18 14:54:49 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/coal_block": {
+    "criteria": {
+      "has_coal": "2021-03-18 15:29:39 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/jungle_boat": {
+    "criteria": {
+      "in_water": "2021-03-18 14:55:53 +0200"
+    },
+    "done": true
   },
   "minecraft:recipes/transportation/spruce_boat": {
     "criteria": {
@@ -73,6 +100,12 @@
       "minecraft:plains": "2021-03-18 14:54:21 +0200"
     },
     "done": false
+  },
+  "minecraft:recipes/misc/bone_meal": {
+    "criteria": {
+      "has_bone": "2021-03-18 15:29:39 +0200"
+    },
+    "done": true
   },
   "DataVersion": 2586
 }
