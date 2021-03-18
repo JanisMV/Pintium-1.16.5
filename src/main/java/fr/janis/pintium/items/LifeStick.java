@@ -6,9 +6,11 @@ import fr.janis.pintium.init.PintiumItems;
 import fr.janis.pintium.main;
 import fr.janis.pintium.network.Network;
 import fr.janis.pintium.network.packet.TameRatelPacket;
+import fr.janis.pintium.network.packet.TameZombiePacket;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.client.util.InputMappings;
+import net.minecraft.entity.EntityType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -42,11 +44,21 @@ public class LifeStick extends Item {
         playerIn.getCapability(CapabilityEntityKilled.ENTITY_KILLED_CAPABILITY).ifPresent(h -> {
             main.LOGGER.debug(h.getName());
             if (h.getName() != null){
+                main.LOGGER.debug(h.getName() + "n'est pas null");
                 if (h.getName().equals(PintiumEntities.RATEL.get().getName().getString()))
                 {
                     if (playerIn.inventory.hasItemStack(new ItemStack(PintiumItems.HEAL_ORB.get()))) {
                         playerIn.inventory.deleteStack(new ItemStack(PintiumItems.HEAL_ORB.get()));
+
                         Network.CHANNEL.sendToServer(new TameRatelPacket());
+                        h.setName(null);
+                    }
+                }
+                else if (h.getName().equals(EntityType.ZOMBIE.getName().getString())){
+                    if (playerIn.inventory.hasItemStack(new ItemStack(PintiumItems.HEAL_ORB.get()))) {
+                        playerIn.inventory.deleteStack(new ItemStack(PintiumItems.HEAL_ORB.get()));
+
+                        Network.CHANNEL.sendToServer(new TameZombiePacket());
                         h.setName(null);
                     }
                 }

@@ -47,5 +47,10 @@ public class Network {
                 .decoder(TameRatelPacket::decode)
                 .consumer(TameRatelPacket::handle)
                 .add();
+        CHANNEL.messageBuilder(TameZombiePacket.class, 6)
+                .encoder(TameZombiePacket::encode)
+                .decoder(TameZombiePacket::decode)
+                .consumer(TameZombiePacket::handle)
+                .add();
     }
 }

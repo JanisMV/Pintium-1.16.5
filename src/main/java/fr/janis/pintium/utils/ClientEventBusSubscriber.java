@@ -7,6 +7,7 @@ import fr.janis.pintium.client.render.TunaRenderer;
 import fr.janis.pintium.init.PintiumEntities;
 import fr.janis.pintium.items.PintiumSpawnEggItem;
 import fr.janis.pintium.main;
+import net.minecraft.client.renderer.entity.ZombieRenderer;
 import net.minecraft.entity.EntityType;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.event.RegistryEvent;
@@ -22,6 +23,7 @@ public class ClientEventBusSubscriber {
     public static void onClientSetup(FMLClientSetupEvent e){
         RenderingRegistry.registerEntityRenderingHandler(PintiumEntities.RATEL.get(), RatelRenderer::new);
         RenderingRegistry.registerEntityRenderingHandler(PintiumEntities.RATEL_BODY_GUARD.get(), RatelRenderer::new);
+        RenderingRegistry.registerEntityRenderingHandler(PintiumEntities.ZOMBIE_BODY_GUARD.get(), ZombieRenderer::new);
         RenderingRegistry.registerEntityRenderingHandler(PintiumEntities.BANANOSAUR.get(), BananosaurRenderer::new);
         RenderingRegistry.registerEntityRenderingHandler(PintiumEntities.TUNA.get(), TunaRenderer::new);
         RenderingRegistry.registerEntityRenderingHandler(PintiumEntities.BANANOFISH.get(), BananoFishRenderer::new);

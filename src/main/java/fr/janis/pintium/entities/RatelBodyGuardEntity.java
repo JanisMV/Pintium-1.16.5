@@ -82,7 +82,7 @@ public class RatelBodyGuardEntity extends RatelEntity {
 
     @Override
     protected int getExperiencePoints(PlayerEntity player){
-        return 1 + this.world.rand.nextInt(4);
+        return 0;
     }
 
     @Nullable

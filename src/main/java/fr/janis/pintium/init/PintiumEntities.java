@@ -27,6 +27,13 @@ public class PintiumEntities {
             .build(new ResourceLocation(main.MODID, "ratel").toString())
     );
 
+    public static final RegistryObject<EntityType<ZombieBodyGuardEntity>> ZOMBIE_BODY_GUARD = ENTITY_TYPES.register(
+            "zombie_body_guard",
+            () -> EntityType.Builder.create(ZombieBodyGuardEntity::new, EntityClassification.MONSTER)
+                    .size(1.0F, 1.0F)
+                    .build(new ResourceLocation(main.MODID, "zombie").toString())
+    );
+
     public static final RegistryObject<EntityType<BananosaurEntity>> BANANOSAUR = ENTITY_TYPES.register("bananosaur",
             () -> EntityType.Builder.create(BananosaurEntity::new, EntityClassification.CREATURE)
             .size(2.0F, 2.0F)
