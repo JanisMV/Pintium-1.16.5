@@ -1,0 +1,6 @@
+{
+  "parent": "block/crop",
+  "textures": {
+    "crop": "pintium:block/cannabis_crop_stage1"
+  }
+}

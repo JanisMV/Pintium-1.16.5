@@ -1,0 +1,97 @@
+---- Minecraft Crash Report ----
+// This doesn't make any sense!
+
+Time: 17/03/21 21:56
+Description: Saving entity NBT
+
+java.lang.NullPointerException: Saving entity NBT
+	at net.minecraft.nbt.StringNBT.valueOf(StringNBT.java:40) ~[forge:?] {re:classloading}
+	at net.minecraft.nbt.CompoundNBT.putString(CompoundNBT.java:180) ~[forge:?] {re:classloading}
+	at fr.janis.pintium.data.CapabilityEntityKilled$Storage.writeNBT(CapabilityEntityKilled.java:26) ~[?:?] {re:classloading}
+	at fr.janis.pintium.data.CapabilityEntityKilled$Storage.writeNBT(CapabilityEntityKilled.java:20) ~[?:?] {re:classloading}
+	at net.minecraftforge.common.capabilities.Capability.writeNBT(Capability.java:114) ~[forge:?] {re:classloading}
+	at fr.janis.pintium.data.EntityKilledProvider.serializeNBT(EntityKilledProvider.java:34) ~[?:?] {re:classloading}
+	at fr.janis.pintium.data.EntityKilledProvider.serializeNBT(EntityKilledProvider.java:13) ~[?:?] {re:classloading}
+	at net.minecraftforge.common.capabilities.CapabilityDispatcher.serializeNBT(CapabilityDispatcher.java:127) ~[forge:?] {re:classloading}
+	at net.minecraftforge.common.capabilities.CapabilityProvider.serializeCaps(CapabilityProvider.java:86) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.Entity.writeWithoutTypeId(Entity.java:1567) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.integrated.IntegratedPlayerList.writePlayerData(IntegratedPlayerList.java:29) ~[forge:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.server.management.PlayerList.saveAllPlayerData(PlayerList.java:662) ~[forge:?] {re:classloading}
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:78) ~[forge:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.func_240802_v_(MinecraftServer.java:664) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.lambda$startServer$0(MinecraftServer.java:233) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_281] {}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Stacktrace:
+	at net.minecraft.nbt.StringNBT.valueOf(StringNBT.java:40) ~[forge:?] {re:classloading}
+	at net.minecraft.nbt.CompoundNBT.putString(CompoundNBT.java:180) ~[forge:?] {re:classloading}
+	at fr.janis.pintium.data.CapabilityEntityKilled$Storage.writeNBT(CapabilityEntityKilled.java:26) ~[?:?] {re:classloading}
+	at fr.janis.pintium.data.CapabilityEntityKilled$Storage.writeNBT(CapabilityEntityKilled.java:20) ~[?:?] {re:classloading}
+	at net.minecraftforge.common.capabilities.Capability.writeNBT(Capability.java:114) ~[forge:?] {re:classloading}
+	at fr.janis.pintium.data.EntityKilledProvider.serializeNBT(EntityKilledProvider.java:34) ~[?:?] {re:classloading}
+	at fr.janis.pintium.data.EntityKilledProvider.serializeNBT(EntityKilledProvider.java:13) ~[?:?] {re:classloading}
+	at net.minecraftforge.common.capabilities.CapabilityDispatcher.serializeNBT(CapabilityDispatcher.java:127) ~[forge:?] {re:classloading}
+	at net.minecraftforge.common.capabilities.CapabilityProvider.serializeCaps(CapabilityProvider.java:86) ~[forge:?] {re:classloading}
+-- Entity being saved --
+Details:
+	Entity Type: minecraft:player (net.minecraft.entity.player.ServerPlayerEntity)
+	Entity ID: 197
+	Entity Name: Dev
+	Entity's Exact location: 192.51, 71.41, -88.51
+	Entity's Block location: World: (192,71,-89), Chunk: (at 0,4,7 in 12,-6; contains blocks 192,0,-96 to 207,255,-81), Region: (0,-1; contains chunks 0,-32 to 31,-1, blocks 0,0,-512 to 511,255,-1)
+	Entity's Momentum: 0.00, 0.00, 0.00
+	Entity's Passengers: []
+	Entity's Vehicle: ~~ERROR~~ NullPointerException: null
+Stacktrace:
+	at net.minecraft.entity.Entity.writeWithoutTypeId(Entity.java:1567) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.integrated.IntegratedPlayerList.writePlayerData(IntegratedPlayerList.java:29) ~[forge:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.server.management.PlayerList.saveAllPlayerData(PlayerList.java:662) ~[forge:?] {re:classloading}
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:78) ~[forge:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.func_240802_v_(MinecraftServer.java:664) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.lambda$startServer$0(MinecraftServer.java:233) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_281] {}
+
+
+-- System Details --
+Details:
+	Minecraft Version: 1.16.5
+	Minecraft Version ID: 1.16.5
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_281, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 94655000 bytes (90 MB) / 617611264 bytes (589 MB) up to 813170688 bytes (775 MB)
+	CPUs: 4
+	JVM Flags: 1 total; -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump
+	ModLauncher: 8.0.9+86+master.3cf110c
+	ModLauncher launch target: fmluserdevclient
+	ModLauncher naming: mcp
+	ModLauncher services: 
+		/mixin-0.8.2.jar mixin PLUGINSERVICE 
+		/eventbus-4.0.0.jar eventbus PLUGINSERVICE 
+		/forge-1.16.5-36.0.54_mapped_snapshot_20210309-1.16.5-launcher.jar object_holder_definalize PLUGINSERVICE 
+		/forge-1.16.5-36.0.54_mapped_snapshot_20210309-1.16.5-launcher.jar runtime_enum_extender PLUGINSERVICE 
+		/accesstransformers-3.0.1.jar accesstransformer PLUGINSERVICE 
+		/forge-1.16.5-36.0.54_mapped_snapshot_20210309-1.16.5-launcher.jar capability_inject_definalize PLUGINSERVICE 
+		/forge-1.16.5-36.0.54_mapped_snapshot_20210309-1.16.5-launcher.jar runtimedistcleaner PLUGINSERVICE 
+		/mixin-0.8.2.jar mixin TRANSFORMATIONSERVICE 
+		/forge-1.16.5-36.0.54_mapped_snapshot_20210309-1.16.5-launcher.jar fml TRANSFORMATIONSERVICE 
+	FML: 36.0
+	Forge: net.minecraftforge:36.0.54
+	FML Language Providers: 
+		javafml@36.0
+		minecraft@1
+	Mod List: 
+		client-extra.jar                                  |Minecraft                     |minecraft                     |1.16.5              |DONE      |a1:d4:5e:04:4f:d3:d6:e0:7b:37:97:cf:77:b0:de:ad:4a:47:ce:8c:96:49:5f:0a:cf:8c:ae:b2:6d:4b:8a:3f
+		forge-1.16.5-36.0.54_mapped_snapshot_20210309-1.16|Forge                         |forge                         |36.0.55             |DONE      |NOSIGNATURE
+		main                                              |Pintium                       |pintium                       |NONE                |DONE      |NOSIGNATURE
+	Crash Report UUID: b69f8e3b-0928-45dc-8c5f-356fba9a6f77
+	Player Count: 1 / 8; [ServerPlayerEntity['Dev'/197, l='ServerLevel[Nouveau monde]', x=192.51, y=71.41, z=-88.51]]
+	Data Packs: vanilla, mod:forge, mod:pintium
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'forge'

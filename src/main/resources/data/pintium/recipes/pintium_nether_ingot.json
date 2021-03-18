@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "pintium:pintium_nether_ore"
+  },
+  "result": "pintium:pintium_ingot",
+  "experience": 10,
+  "cookingtime": 500
+}

@@ -1,0 +1,221 @@
+---- Minecraft Crash Report ----
+// Surprise! Haha. Well, this is awkward.
+
+Time: 05/03/21 12:43
+Description: mouseClicked event handler
+
+java.lang.NullPointerException: mouseClicked event handler
+	at java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:267) ~[?:1.8.0_281] {}
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193) ~[?:1.8.0_281] {}
+	at java.util.Collections$2.tryAdvance(Collections.java:4719) ~[?:1.8.0_281] {}
+	at java.util.Collections$2.forEachRemaining(Collections.java:4727) ~[?:1.8.0_281] {}
+	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:580) ~[?:1.8.0_281] {}
+	at java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:270) ~[?:1.8.0_281] {}
+	at java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948) ~[?:1.8.0_281] {}
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482) ~[?:1.8.0_281] {}
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472) ~[?:1.8.0_281] {}
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708) ~[?:1.8.0_281] {}
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[?:1.8.0_281] {}
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499) ~[?:1.8.0_281] {}
+	at net.minecraft.world.biome.BiomeGenerationSettings.<init>(BiomeGenerationSettings.java:62) ~[forge-1.16.5-36.0.45_mapped_snapshot_20200514-1.16-recomp.jar:?] {re:classloading}
+	at net.minecraft.world.biome.BiomeGenerationSettings.<init>(BiomeGenerationSettings.java:32) ~[forge-1.16.5-36.0.45_mapped_snapshot_20200514-1.16-recomp.jar:?] {re:classloading}
+	at net.minecraft.world.biome.BiomeGenerationSettings$Builder.func_242508_a(BiomeGenerationSettings.java:163) ~[forge-1.16.5-36.0.45_mapped_snapshot_20200514-1.16-recomp.jar:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraftforge.common.ForgeHooks.enhanceBiome(ForgeHooks.java:945) ~[forge-1.16.5-36.0.45_mapped_snapshot_20200514-1.16-recomp.jar:?] {re:classloading}
+	at net.minecraft.world.biome.Biome.lambda$null$8(Biome.java:75) ~[forge-1.16.5-36.0.45_mapped_snapshot_20200514-1.16-recomp.jar:?] {re:classloading,pl:accesstransformer:B}
+	at com.mojang.datafixers.util.Function8.lambda$null$6(Function8.java:22) ~[datafixerupper-4.0.26.jar:?] {re:classloading}
+	at com.mojang.datafixers.util.Function4.lambda$null$2(Function4.java:14) ~[datafixerupper-4.0.26.jar:?] {re:classloading}
+	at com.mojang.serialization.DataResult$Instance.ap2(DataResult.java:315) ~[datafixerupper-4.0.26.jar:?] {}
+	at com.mojang.datafixers.kinds.Applicative.ap4(Applicative.java:84) ~[datafixerupper-4.0.26.jar:?] {re:classloading}
+	at com.mojang.serialization.codecs.RecordCodecBuilder$Instance$7.decode(RecordCodecBuilder.java:404) ~[datafixerupper-4.0.26.jar:?] {}
+	at com.mojang.serialization.codecs.RecordCodecBuilder$2.decode(RecordCodecBuilder.java:107) ~[datafixerupper-4.0.26.jar:?] {}
+	at com.mojang.serialization.MapDecoder.lambda$compressedDecode$0(MapDecoder.java:52) ~[datafixerupper-4.0.26.jar:?] {}
+	at com.mojang.serialization.DataResult.lambda$flatMap$10(DataResult.java:138) ~[datafixerupper-4.0.26.jar:?] {re:classloading}
+	at com.mojang.datafixers.util.Either$Left.map(Either.java:38) ~[datafixerupper-4.0.26.jar:?] {}
+	at com.mojang.serialization.DataResult.flatMap(DataResult.java:136) ~[datafixerupper-4.0.26.jar:?] {re:classloading}
+	at com.mojang.serialization.MapDecoder.compressedDecode(MapDecoder.java:52) ~[datafixerupper-4.0.26.jar:?] {}
+	at com.mojang.serialization.MapCodec$MapCodecCodec.decode(MapCodec.java:91) ~[datafixerupper-4.0.26.jar:?] {}
+	at com.mojang.serialization.Decoder.parse(Decoder.java:18) ~[datafixerupper-4.0.26.jar:?] {re:classloading}
+	at net.minecraft.util.registry.WorldSettingsImport$IResourceAccess$RegistryAccess.func_241879_a(WorldSettingsImport.java:236) ~[forge-1.16.5-36.0.45_mapped_snapshot_20200514-1.16-recomp.jar:?] {re:classloading}
+	at net.minecraft.util.registry.WorldSettingsImport.func_241805_a_(WorldSettingsImport.java:131) ~[forge-1.16.5-36.0.45_mapped_snapshot_20200514-1.16-recomp.jar:?] {re:classloading}
+	at net.minecraft.util.registry.WorldSettingsImport.lambda$func_241797_a_$5(WorldSettingsImport.java:105) ~[forge-1.16.5-36.0.45_mapped_snapshot_20200514-1.16-recomp.jar:?] {re:classloading}
+	at com.mojang.serialization.DataResult.lambda$flatMap$10(DataResult.java:138) ~[datafixerupper-4.0.26.jar:?] {re:classloading}
+	at com.mojang.datafixers.util.Either$Left.map(Either.java:38) ~[datafixerupper-4.0.26.jar:?] {}
+	at com.mojang.serialization.DataResult.flatMap(DataResult.java:136) ~[datafixerupper-4.0.26.jar:?] {re:classloading}
+	at net.minecraft.util.registry.WorldSettingsImport.func_241797_a_(WorldSettingsImport.java:104) ~[forge-1.16.5-36.0.45_mapped_snapshot_20200514-1.16-recomp.jar:?] {re:classloading}
+	at net.minecraft.util.registry.DynamicRegistries.func_243610_a(DynamicRegistries.java:144) ~[forge-1.16.5-36.0.45_mapped_snapshot_20200514-1.16-recomp.jar:?] {re:classloading}
+	at net.minecraft.util.registry.DynamicRegistries.func_243608_a(DynamicRegistries.java:132) ~[forge-1.16.5-36.0.45_mapped_snapshot_20200514-1.16-recomp.jar:?] {re:classloading}
+	at net.minecraft.util.registry.WorldSettingsImport.func_244336_a(WorldSettingsImport.java:53) ~[forge-1.16.5-36.0.45_mapped_snapshot_20200514-1.16-recomp.jar:?] {re:classloading}
+	at net.minecraft.util.registry.DynamicRegistries.func_239770_b_(DynamicRegistries.java:85) ~[forge-1.16.5-36.0.45_mapped_snapshot_20200514-1.16-recomp.jar:?] {re:classloading}
+	at net.minecraft.client.gui.screen.CreateWorldScreen.func_243425_a(CreateWorldScreen.java:118) ~[forge-1.16.5-36.0.45_mapped_snapshot_20200514-1.16-recomp.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.gui.screen.WorldSelectionList.func_212330_a(WorldSelectionList.java:96) ~[forge-1.16.5-36.0.45_mapped_snapshot_20200514-1.16-recomp.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.gui.screen.WorldSelectionList.<init>(WorldSelectionList.java:77) ~[forge-1.16.5-36.0.45_mapped_snapshot_20200514-1.16-recomp.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.gui.screen.WorldSelectionScreen.func_231160_c_(WorldSelectionScreen.java:45) ~[forge-1.16.5-36.0.45_mapped_snapshot_20200514-1.16-recomp.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.gui.screen.Screen.func_231158_b_(Screen.java:325) ~[forge-1.16.5-36.0.45_mapped_snapshot_20200514-1.16-recomp.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.displayGuiScreen(Minecraft.java:885) ~[forge-1.16.5-36.0.45_mapped_snapshot_20200514-1.16-recomp.jar:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.gui.screen.MainMenuScreen.lambda$addSingleplayerMultiplayerButtons$5(MainMenuScreen.java:150) ~[forge-1.16.5-36.0.45_mapped_snapshot_20200514-1.16-recomp.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.gui.widget.button.Button.func_230930_b_(Button.java:26) ~[forge-1.16.5-36.0.45_mapped_snapshot_20200514-1.16-recomp.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.gui.widget.button.AbstractButton.func_230982_a_(AbstractButton.java:18) ~[forge-1.16.5-36.0.45_mapped_snapshot_20200514-1.16-recomp.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.gui.widget.Widget.func_231044_a_(Widget.java:136) ~[forge-1.16.5-36.0.45_mapped_snapshot_20200514-1.16-recomp.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.gui.INestedGuiEventHandler.func_231044_a_(INestedGuiEventHandler.java:31) ~[forge-1.16.5-36.0.45_mapped_snapshot_20200514-1.16-recomp.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.gui.screen.MainMenuScreen.func_231044_a_(MainMenuScreen.java:302) ~[forge-1.16.5-36.0.45_mapped_snapshot_20200514-1.16-recomp.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.MouseHelper.lambda$mouseButtonCallback$0(MouseHelper.java:92) ~[forge-1.16.5-36.0.45_mapped_snapshot_20200514-1.16-recomp.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.gui.screen.Screen.func_231153_a_(Screen.java:427) ~[forge-1.16.5-36.0.45_mapped_snapshot_20200514-1.16-recomp.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.MouseHelper.mouseButtonCallback(MouseHelper.java:90) ~[forge-1.16.5-36.0.45_mapped_snapshot_20200514-1.16-recomp.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.MouseHelper.lambda$null$4(MouseHelper.java:185) ~[forge-1.16.5-36.0.45_mapped_snapshot_20200514-1.16-recomp.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.util.concurrent.ThreadTaskExecutor.execute(ThreadTaskExecutor.java:86) ~[forge-1.16.5-36.0.45_mapped_snapshot_20200514-1.16-recomp.jar:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.client.MouseHelper.lambda$registerCallbacks$5(MouseHelper.java:184) ~[forge-1.16.5-36.0.45_mapped_snapshot_20200514-1.16-recomp.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at org.lwjgl.glfw.GLFWMouseButtonCallbackI.callback(GLFWMouseButtonCallbackI.java:36) ~[lwjgl-glfw-3.2.2.jar:build 10] {}
+	at org.lwjgl.system.JNI.invokeV(Native Method) ~[lwjgl-3.2.2.jar:build 10] {}
+	at org.lwjgl.glfw.GLFW.glfwPollEvents(GLFW.java:3101) ~[lwjgl-glfw-3.2.2.jar:build 10] {}
+	at com.mojang.blaze3d.systems.RenderSystem.flipFrame(RenderSystem.java:93) ~[forge-1.16.5-36.0.45_mapped_snapshot_20200514-1.16-recomp.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.MainWindow.flipFrame(MainWindow.java:305) ~[forge-1.16.5-36.0.45_mapped_snapshot_20200514-1.16-recomp.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1033) ~[forge-1.16.5-36.0.45_mapped_snapshot_20200514-1.16-recomp.jar:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.run(Minecraft.java:612) ~[forge-1.16.5-36.0.45_mapped_snapshot_20200514-1.16-recomp.jar:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.main.Main.main(Main.java:184) ~[forge-1.16.5-36.0.45_mapped_snapshot_20200514-1.16-recomp.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_281] {}
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_281] {}
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_281] {}
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_281] {}
+	at net.minecraftforge.userdev.FMLUserdevClientLaunchProvider.lambda$launchService$0(FMLUserdevClientLaunchProvider.java:52) ~[forge-1.16.5-36.0.45_mapped_snapshot_20200514-1.16-recomp.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37) [modlauncher-8.0.9.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:54) [modlauncher-8.0.9.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:72) [modlauncher-8.0.9.jar:?] {}
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:82) [modlauncher-8.0.9.jar:?] {}
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:66) [modlauncher-8.0.9.jar:?] {}
+	at net.minecraftforge.userdev.LaunchTesting.main(LaunchTesting.java:105) [forge-1.16.5-36.0.45_mapped_snapshot_20200514-1.16-recomp.jar:?] {}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Render thread
+Stacktrace:
+	at java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:267) ~[?:1.8.0_281] {}
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193) ~[?:1.8.0_281] {}
+	at java.util.Collections$2.tryAdvance(Collections.java:4719) ~[?:1.8.0_281] {}
+	at java.util.Collections$2.forEachRemaining(Collections.java:4727) ~[?:1.8.0_281] {}
+	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:580) ~[?:1.8.0_281] {}
+	at java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:270) ~[?:1.8.0_281] {}
+	at java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948) ~[?:1.8.0_281] {}
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482) ~[?:1.8.0_281] {}
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472) ~[?:1.8.0_281] {}
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708) ~[?:1.8.0_281] {}
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[?:1.8.0_281] {}
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499) ~[?:1.8.0_281] {}
+	at net.minecraft.world.biome.BiomeGenerationSettings.<init>(BiomeGenerationSettings.java:62) ~[forge-1.16.5-36.0.45_mapped_snapshot_20200514-1.16-recomp.jar:?] {re:classloading}
+	at net.minecraft.world.biome.BiomeGenerationSettings.<init>(BiomeGenerationSettings.java:32) ~[forge-1.16.5-36.0.45_mapped_snapshot_20200514-1.16-recomp.jar:?] {re:classloading}
+	at net.minecraft.world.biome.BiomeGenerationSettings$Builder.func_242508_a(BiomeGenerationSettings.java:163) ~[forge-1.16.5-36.0.45_mapped_snapshot_20200514-1.16-recomp.jar:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraftforge.common.ForgeHooks.enhanceBiome(ForgeHooks.java:945) ~[forge-1.16.5-36.0.45_mapped_snapshot_20200514-1.16-recomp.jar:?] {re:classloading}
+	at net.minecraft.world.biome.Biome.lambda$null$8(Biome.java:75) ~[forge-1.16.5-36.0.45_mapped_snapshot_20200514-1.16-recomp.jar:?] {re:classloading,pl:accesstransformer:B}
+	at com.mojang.datafixers.util.Function8.lambda$null$6(Function8.java:22) ~[datafixerupper-4.0.26.jar:?] {re:classloading}
+	at com.mojang.datafixers.util.Function4.lambda$null$2(Function4.java:14) ~[datafixerupper-4.0.26.jar:?] {re:classloading}
+	at com.mojang.serialization.DataResult$Instance.ap2(DataResult.java:315) ~[datafixerupper-4.0.26.jar:?] {}
+	at com.mojang.datafixers.kinds.Applicative.ap4(Applicative.java:84) ~[datafixerupper-4.0.26.jar:?] {re:classloading}
+	at com.mojang.serialization.codecs.RecordCodecBuilder$Instance$7.decode(RecordCodecBuilder.java:404) ~[datafixerupper-4.0.26.jar:?] {}
+	at com.mojang.serialization.codecs.RecordCodecBuilder$2.decode(RecordCodecBuilder.java:107) ~[datafixerupper-4.0.26.jar:?] {}
+	at com.mojang.serialization.MapDecoder.lambda$compressedDecode$0(MapDecoder.java:52) ~[datafixerupper-4.0.26.jar:?] {}
+	at com.mojang.serialization.DataResult.lambda$flatMap$10(DataResult.java:138) ~[datafixerupper-4.0.26.jar:?] {re:classloading}
+	at com.mojang.datafixers.util.Either$Left.map(Either.java:38) ~[datafixerupper-4.0.26.jar:?] {}
+	at com.mojang.serialization.DataResult.flatMap(DataResult.java:136) ~[datafixerupper-4.0.26.jar:?] {re:classloading}
+	at com.mojang.serialization.MapDecoder.compressedDecode(MapDecoder.java:52) ~[datafixerupper-4.0.26.jar:?] {}
+	at com.mojang.serialization.MapCodec$MapCodecCodec.decode(MapCodec.java:91) ~[datafixerupper-4.0.26.jar:?] {}
+	at com.mojang.serialization.Decoder.parse(Decoder.java:18) ~[datafixerupper-4.0.26.jar:?] {re:classloading}
+	at net.minecraft.util.registry.WorldSettingsImport$IResourceAccess$RegistryAccess.func_241879_a(WorldSettingsImport.java:236) ~[forge:?] {re:classloading}
+	at net.minecraft.util.registry.WorldSettingsImport.func_241805_a_(WorldSettingsImport.java:131) ~[forge:?] {re:classloading}
+	at net.minecraft.util.registry.WorldSettingsImport.lambda$func_241797_a_$5(WorldSettingsImport.java:105) ~[forge:?] {re:classloading}
+	at com.mojang.serialization.DataResult.lambda$flatMap$10(DataResult.java:138) ~[datafixerupper-4.0.26.jar:?] {re:classloading}
+	at com.mojang.datafixers.util.Either$Left.map(Either.java:38) ~[datafixerupper-4.0.26.jar:?] {}
+	at com.mojang.serialization.DataResult.flatMap(DataResult.java:136) ~[datafixerupper-4.0.26.jar:?] {re:classloading}
+	at net.minecraft.util.registry.WorldSettingsImport.func_241797_a_(WorldSettingsImport.java:104) ~[forge:?] {re:classloading}
+	at net.minecraft.util.registry.DynamicRegistries.func_243610_a(DynamicRegistries.java:144) ~[forge:?] {re:classloading}
+	at net.minecraft.util.registry.DynamicRegistries.func_243608_a(DynamicRegistries.java:132) ~[forge:?] {re:classloading}
+	at net.minecraft.util.registry.WorldSettingsImport.func_244336_a(WorldSettingsImport.java:53) ~[forge:?] {re:classloading}
+	at net.minecraft.util.registry.DynamicRegistries.func_239770_b_(DynamicRegistries.java:85) ~[forge:?] {re:classloading}
+	at net.minecraft.client.gui.screen.CreateWorldScreen.func_243425_a(CreateWorldScreen.java:118) ~[forge:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.gui.screen.WorldSelectionList.func_212330_a(WorldSelectionList.java:96) ~[forge:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.gui.screen.WorldSelectionList.<init>(WorldSelectionList.java:77) ~[forge:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.gui.screen.WorldSelectionScreen.func_231160_c_(WorldSelectionScreen.java:45) ~[forge:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.gui.screen.Screen.func_231158_b_(Screen.java:325) ~[forge:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.displayGuiScreen(Minecraft.java:885) ~[forge:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.gui.screen.MainMenuScreen.lambda$addSingleplayerMultiplayerButtons$5(MainMenuScreen.java:150) ~[forge:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.gui.widget.button.Button.func_230930_b_(Button.java:26) ~[forge:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.gui.widget.button.AbstractButton.func_230982_a_(AbstractButton.java:18) ~[forge:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.gui.widget.Widget.func_231044_a_(Widget.java:136) ~[forge:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.gui.INestedGuiEventHandler.func_231044_a_(INestedGuiEventHandler.java:31) ~[forge:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.gui.screen.MainMenuScreen.func_231044_a_(MainMenuScreen.java:302) ~[forge:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.MouseHelper.lambda$mouseButtonCallback$0(MouseHelper.java:92) ~[forge:?] {re:classloading,pl:runtimedistcleaner:A}
+-- Affected screen --
+Details:
+	Screen name: net.minecraft.client.gui.screen.MainMenuScreen
+Stacktrace:
+	at net.minecraft.client.gui.screen.Screen.func_231153_a_(Screen.java:427) ~[forge-1.16.5-36.0.45_mapped_snapshot_20200514-1.16-recomp.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.MouseHelper.mouseButtonCallback(MouseHelper.java:90) ~[forge-1.16.5-36.0.45_mapped_snapshot_20200514-1.16-recomp.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.MouseHelper.lambda$null$4(MouseHelper.java:185) ~[forge-1.16.5-36.0.45_mapped_snapshot_20200514-1.16-recomp.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.util.concurrent.ThreadTaskExecutor.execute(ThreadTaskExecutor.java:86) ~[forge-1.16.5-36.0.45_mapped_snapshot_20200514-1.16-recomp.jar:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.client.MouseHelper.lambda$registerCallbacks$5(MouseHelper.java:184) ~[forge-1.16.5-36.0.45_mapped_snapshot_20200514-1.16-recomp.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at org.lwjgl.glfw.GLFWMouseButtonCallbackI.callback(GLFWMouseButtonCallbackI.java:36) ~[lwjgl-glfw-3.2.2.jar:build 10] {}
+	at org.lwjgl.system.JNI.invokeV(Native Method) ~[lwjgl-3.2.2.jar:build 10] {}
+	at org.lwjgl.glfw.GLFW.glfwPollEvents(GLFW.java:3101) ~[lwjgl-glfw-3.2.2.jar:build 10] {}
+	at com.mojang.blaze3d.systems.RenderSystem.flipFrame(RenderSystem.java:93) ~[forge-1.16.5-36.0.45_mapped_snapshot_20200514-1.16-recomp.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.MainWindow.flipFrame(MainWindow.java:305) ~[forge-1.16.5-36.0.45_mapped_snapshot_20200514-1.16-recomp.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1033) ~[forge-1.16.5-36.0.45_mapped_snapshot_20200514-1.16-recomp.jar:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.run(Minecraft.java:612) ~[forge-1.16.5-36.0.45_mapped_snapshot_20200514-1.16-recomp.jar:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.main.Main.main(Main.java:184) ~[forge-1.16.5-36.0.45_mapped_snapshot_20200514-1.16-recomp.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_281] {}
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_281] {}
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_281] {}
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_281] {}
+	at net.minecraftforge.userdev.FMLUserdevClientLaunchProvider.lambda$launchService$0(FMLUserdevClientLaunchProvider.java:52) ~[forge-1.16.5-36.0.45_mapped_snapshot_20200514-1.16-recomp.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37) [modlauncher-8.0.9.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:54) [modlauncher-8.0.9.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:72) [modlauncher-8.0.9.jar:?] {}
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:82) [modlauncher-8.0.9.jar:?] {}
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:66) [modlauncher-8.0.9.jar:?] {}
+	at net.minecraftforge.userdev.LaunchTesting.main(LaunchTesting.java:105) [forge-1.16.5-36.0.45_mapped_snapshot_20200514-1.16-recomp.jar:?] {}
+
+
+-- System Details --
+Details:
+	Minecraft Version: 1.16.5
+	Minecraft Version ID: 1.16.5
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_281, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 147687688 bytes (140 MB) / 681050112 bytes (649 MB) up to 813170688 bytes (775 MB)
+	CPUs: 4
+	JVM Flags: 1 total; -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump
+	ModLauncher: 8.0.9+86+master.3cf110c
+	ModLauncher launch target: fmluserdevclient
+	ModLauncher naming: mcp
+	ModLauncher services: 
+		/mixin-0.8.2.jar mixin PLUGINSERVICE 
+		/eventbus-4.0.0.jar eventbus PLUGINSERVICE 
+		/forge-1.16.5-36.0.45_mapped_snapshot_20200514-1.16-launcher.jar object_holder_definalize PLUGINSERVICE 
+		/forge-1.16.5-36.0.45_mapped_snapshot_20200514-1.16-launcher.jar runtime_enum_extender PLUGINSERVICE 
+		/accesstransformers-3.0.1.jar accesstransformer PLUGINSERVICE 
+		/forge-1.16.5-36.0.45_mapped_snapshot_20200514-1.16-launcher.jar capability_inject_definalize PLUGINSERVICE 
+		/forge-1.16.5-36.0.45_mapped_snapshot_20200514-1.16-launcher.jar runtimedistcleaner PLUGINSERVICE 
+		/mixin-0.8.2.jar mixin TRANSFORMATIONSERVICE 
+		/forge-1.16.5-36.0.45_mapped_snapshot_20200514-1.16-launcher.jar fml TRANSFORMATIONSERVICE 
+	FML: 36.0
+	Forge: net.minecraftforge:36.0.45
+	FML Language Providers: 
+		javafml@36.0
+		minecraft@1
+	Mod List: 
+		client-extra.jar                                  |Minecraft                     |minecraft                     |1.16.2              |DONE      |a1:d4:5e:04:4f:d3:d6:e0:7b:37:97:cf:77:b0:de:ad:4a:47:ce:8c:96:49:5f:0a:cf:8c:ae:b2:6d:4b:8a:3f
+		forge-1.16.5-36.0.45_mapped_snapshot_20200514-1.16|Forge                         |forge                         |33.0.61             |DONE      |NOSIGNATURE
+		main                                              |Pintium                       |pintium                       |NONE                |DONE      |NOSIGNATURE
+	Crash Report UUID: be28051a-50c8-4282-ba8f-5e106545793d
+	Launched Version: MOD_DEV
+	Backend library: LWJGL version 3.2.2 build 10
+	Backend API: AMD Radeon(TM) Vega 3 Graphics GL version 4.6.14757 Compatibility Profile Context 20.12.1 27.20.14501.28009, ATI Technologies Inc.
+	GL Caps: Using framebuffer using OpenGL 3.0
+	Using VBOs: Yes
+	Is Modded: Definitely; Client brand changed to 'forge'
+	Type: Client (map_client.txt)
+	Graphics mode: fancy
+	Resource Packs: 
+	Current Language: English (US)
+	CPU: 4x AMD Ryzen 3 2200U with Radeon Vega Mobile Gfx 

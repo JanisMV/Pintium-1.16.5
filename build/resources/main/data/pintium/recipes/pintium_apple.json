@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "X#X",
+    "XXX"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:apple"
+    },
+    "X": {
+      "item": "pintium:pintium_ingot"
+    }
+  },
+  "result": {
+    "item": "pintium:pintium_apple"
+  }
+}

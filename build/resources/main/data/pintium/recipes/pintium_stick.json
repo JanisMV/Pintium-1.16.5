@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " ",
+    "X",
+    "X"
+  ],
+  "key": {
+    "X": {
+      "item": "pintium:pintium_ingot"
+    }
+  },
+  "result": {
+    "item": "pintium:pintium_stick",
+    "count": 4
+  }
+}

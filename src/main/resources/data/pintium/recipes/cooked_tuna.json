@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "pintium:delicious_tuna"
+  },
+  "result": "pintium:cooked_tuna",
+  "experience": 0.5,
+  "cookingtime": 50
+}

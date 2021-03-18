@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: Pintium
+Implementation-Version: 0.1c
+Specification-Vendor: examplemodsareus
+Specification-Title: examplemod
+Implementation-Timestamp: 2021-03-16T17:06:40+0200
+Specification-Version: 1
+Implementation-Vendor: examplemodsareus
+

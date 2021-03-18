@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " X ",
+    "X#X",
+    " X "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:nether_wart"
+    },
+    "X": {
+      "item": "pintium:pintium_ingot"
+    }
+  },
+  "result": {
+    "item": "pintium:jump_orb"
+  }
+}
