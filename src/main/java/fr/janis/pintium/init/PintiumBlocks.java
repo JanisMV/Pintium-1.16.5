@@ -1,4 +1,6 @@
 package fr.janis.pintium.init;
+import fr.janis.pintium.blocks.BananaBlock;
+import fr.janis.pintium.blocks.PintiumBlock;
 import fr.janis.pintium.blocks.PintiumEffectInvisibleBlock;
 import fr.janis.pintium.main;
 
@@ -11,15 +13,17 @@ import net.minecraftforge.common.ToolType;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraft.block.TallFlowerBlock;
 
 import java.util.function.Supplier;
 
-public class    PintiumBlocks {
+public class PintiumBlocks {
 
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, main.MODID);
 
-    public static final RegistryObject<Block> PINTIUM_BLOCK = createBlock("pintium_block", () -> new Block(AbstractBlock.Properties.create(Material.IRON).hardnessAndResistance(8f, 15f).harvestTool(ToolType.PICKAXE).harvestLevel(2).setRequiresTool().sound(SoundType.METAL)));
+    public static final RegistryObject<Block> PINTIUM_BLOCK = createBlock("pintium_block", PintiumBlock::new);
+
+    public static final RegistryObject<Block> BANANA_BLOCK = createBlock("banana_block", BananaBlock::new);
+
     public static final RegistryObject<Block> PINTIUM_EFFECT_INVISIBLE_BLOCK = createBlock("pintium_effect_invisible_block", PintiumEffectInvisibleBlock::new);
 
     public static final RegistryObject<Block> PINTIUM_OVERWORLD_ORE = createBlock("pintium_overworld_ore", () -> new Block(AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(4f, 15f).harvestTool(ToolType.PICKAXE).harvestLevel(2).setRequiresTool().sound(SoundType.STONE)));

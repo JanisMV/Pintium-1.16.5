@@ -4,6 +4,7 @@ import fr.janis.pintium.entities.*;
 import fr.janis.pintium.main;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.projectile.FireballEntity;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -64,5 +65,11 @@ public class PintiumEntities {
             () -> EntityType.Builder.create(BananoFishEntity::new, EntityClassification.WATER_CREATURE)
             .size(1.0F, 1.0F)
             .build(new ResourceLocation(main.MODID, "bananofish").toString())
+    );
+
+    public static final RegistryObject<EntityType<BananatherEntity>> BANANATHER = ENTITY_TYPES.register("bananather",
+            () -> EntityType.Builder.create(BananatherEntity::new, EntityClassification.MONSTER)
+                    .size(1.0F, 1.0F)
+                    .build(new ResourceLocation(main.MODID, "bananather").toString())
     );
 }

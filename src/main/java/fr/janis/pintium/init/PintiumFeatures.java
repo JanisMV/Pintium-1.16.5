@@ -58,8 +58,8 @@ public class PintiumFeatures {
 
         else {
             if (e.getCategory() != Biome.Category.OCEAN && e.getCategory() != Biome.Category.RIVER){
-                e.getSpawns().getSpawner(EntityClassification.MONSTER).add(new MobSpawnInfo.Spawners(PintiumEntities.RATEL.get(), 5, 5, 20));
-                e.getSpawns().getSpawner(EntityClassification.CREATURE).add(new MobSpawnInfo.Spawners(PintiumEntities.BANANOSAUR.get(), 5, 1, 20));
+                e.getSpawns().getSpawner(EntityClassification.MONSTER).add(new MobSpawnInfo.Spawners(PintiumEntities.RATEL.get(), 10, 5, 20));
+                e.getSpawns().getSpawner(EntityClassification.CREATURE).add(new MobSpawnInfo.Spawners(PintiumEntities.BANANOSAUR.get(), 1, 1, 20));
             }
             else {
                 e.getSpawns().getSpawner(EntityClassification.WATER_CREATURE).add(new MobSpawnInfo.Spawners(PintiumEntities.TUNA.get(), 20, 5, 20));

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " ",
+    "X",
+    " "
+  ],
+  "key": {
+    "X": {
+      "item": "pintium:banana_block"
+    }
+  },
+  "result": {
+    "item": "pintium:banana",
+    "count": 9
+  }
+}

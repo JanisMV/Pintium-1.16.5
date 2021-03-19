@@ -40,6 +40,7 @@
   "block.pintium.cannabis_crop": "Cannabis",
   "block.pintium.pintium_overworld_ore": "Minerai de Pintium",
   "block.pintium.pintium_nether_ore": "Minerai de Pintium",
+  "block.pintium.banana_block": "Bloc de bananes",
   "tooltip.stick_of_god.not_hold_shift": "Maintenir Shift pour plus d'informations",
   "tooltip.stick_of_god.hold_shift": "Clic droit pour des effets d'Absorption et de Régénération pour 3 minutes.",
   "tooltip.jump_stick.not_hold_shift": "Maintenir Shift pour plus d'informations",
@@ -62,5 +63,6 @@
   "pintium.guispells.button.ignis.title": "Ignis",
   "key.spells": "Sorts",
   "key.categories.pintium": "Pintium",
-  "entity.pintium.ratel": "Ratel"
+  "entity.pintium.ratel": "Ratel",
+  "entity.pintium.bananather": "Bananather"
 }

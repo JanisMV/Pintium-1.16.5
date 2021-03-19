@@ -1,9 +1,6 @@
 package fr.janis.pintium.utils;
 
-import fr.janis.pintium.client.render.BananoFishRenderer;
-import fr.janis.pintium.client.render.BananosaurRenderer;
-import fr.janis.pintium.client.render.RatelRenderer;
-import fr.janis.pintium.client.render.TunaRenderer;
+import fr.janis.pintium.client.render.*;
 import fr.janis.pintium.init.PintiumEntities;
 import fr.janis.pintium.items.PintiumSpawnEggItem;
 import fr.janis.pintium.main;
@@ -30,6 +27,7 @@ public class ClientEventBusSubscriber {
         RenderingRegistry.registerEntityRenderingHandler(PintiumEntities.CREEPER_BODY_GUARD.get(), CreeperRenderer::new);
         RenderingRegistry.registerEntityRenderingHandler(PintiumEntities.BANANOSAUR.get(), BananosaurRenderer::new);
         RenderingRegistry.registerEntityRenderingHandler(PintiumEntities.TUNA.get(), TunaRenderer::new);
+        RenderingRegistry.registerEntityRenderingHandler(PintiumEntities.BANANATHER.get(), BananatherRenderer::new);
         RenderingRegistry.registerEntityRenderingHandler(PintiumEntities.BANANOFISH.get(), BananoFishRenderer::new);
     }
 

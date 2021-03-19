@@ -23,6 +23,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 
+// MorphIntoMob
 // Gravity Gun
 // Système de level
 // Ajouter des structures
@@ -61,6 +62,7 @@ public class main
             GlobalEntityTypeAttributes.put(PintiumEntities.ZOMBIE_BODY_GUARD.get(), ZombieBodyGuardEntity.setCustomAttributes().create());
             GlobalEntityTypeAttributes.put(PintiumEntities.SKELETON_BODY_GUARD.get(), SkeletonBodyGuardEntity.setCustomAttributes().create());
             GlobalEntityTypeAttributes.put(PintiumEntities.CREEPER_BODY_GUARD.get(), CreeperBodyGuardEntity.setCustomAttributes().create());
+            GlobalEntityTypeAttributes.put(PintiumEntities.BANANATHER.get(), BananatherEntity.setCustomAttributes().create());
             GlobalEntityTypeAttributes.put(PintiumEntities.BANANOSAUR.get(), BananosaurEntity.setCustomAttributes().create());
             GlobalEntityTypeAttributes.put(PintiumEntities.TUNA.get(), TunaEntity.setCustomAttributes().create());
             GlobalEntityTypeAttributes.put(PintiumEntities.BANANOFISH.get(), BananoFishEntity.setCustomAttributes().create());

@@ -40,6 +40,7 @@
   "block.pintium.cannabis_crop": "Cannabis",
   "block.pintium.pintium_overworld_ore": "Pintium Ore",
   "block.pintium.pintium_nether_ore": "Pintium Ore",
+  "block.pintium.banana_block": "Banana Block",
   "tooltip.stick_of_god.not_hold_shift": "Hold shift for more information",
   "tooltip.stick_of_god.hold_shift": "Right click for Absorption and Regeneration effects for 3 minutes.",
   "tooltip.jump_stick.not_hold_shift": "Hold shift for more information",
@@ -62,5 +63,6 @@
   "pintium.guispells.button.ignis.title": "Ignis",
   "key.spells": "Spells",
   "key.categories.pintium": "Pintium",
-  "entity.pintium.ratel": "Ratel"
+  "entity.pintium.ratel": "Ratel",
+  "entity.pintium.bananather": "Bananather"
 }
