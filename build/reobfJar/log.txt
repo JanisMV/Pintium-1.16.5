@@ -1,4 +1,4 @@
-Args: "--in-jar", "C:\Users\Win10\Desktop\Pintium\build\libs\PINTIUM-0.3a.jar", "--out-jar", "C:\Users\Win10\Desktop\Pintium\build\reobfJar\output.jar", "--srg-in", "C:\Users\Win10\Desktop\Pintium\build\createMcpToSrg\output.tsrg", "--live"
+Args: "--in-jar", "C:\Users\Win10\Desktop\Pintium\build\libs\PINTIUM-0.3b.jar", "--out-jar", "C:\Users\Win10\Desktop\Pintium\build\reobfJar\output.jar", "--srg-in", "C:\Users\Win10\Desktop\Pintium\build\createMcpToSrg\output.tsrg", "--live"
 Classpath: C:\Users\Win10\.gradle\caches\forge_gradle\maven_downloader\net\md-5\SpecialSource\1.8.3\SpecialSource-1.8.3-shaded.jar
 Classpath: C:\Users\Win10\.gradle\caches\forge_gradle\minecraft_user_repo\net\minecraftforge\forge\1.16.5-36.1.0_mapped_snapshot_20210309-1.16.5\forge-1.16.5-36.1.0_mapped_snapshot_20210309-1.16.5-recomp.jar
 Classpath: C:\Users\Win10\.gradle\caches\forge_gradle\minecraft_user_repo\net\minecraftforge\forge\1.16.5-36.1.0_mapped_snapshot_20210309-1.16.5\forge-1.16.5-36.1.0_mapped_snapshot_20210309-1.16.5-launcher.jar
