@@ -34,7 +34,7 @@ public class RatelEntity extends MonsterEntity {
         return MobEntity.func_233666_p_()
                 .createMutableAttribute(Attributes.MAX_HEALTH, 30.0D)
                 .createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.50D)
-                .createMutableAttribute(Attributes.ATTACK_DAMAGE, 4)
+                .createMutableAttribute(Attributes.ATTACK_DAMAGE, 7)
                 .createMutableAttribute(Attributes.ATTACK_SPEED, 1)
                 .createMutableAttribute(Attributes.KNOCKBACK_RESISTANCE, 0);
     }

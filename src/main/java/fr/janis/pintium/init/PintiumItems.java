@@ -37,7 +37,8 @@ public class PintiumItems {
     public static final RegistryObject<Item> PINTIUM_AXE = ITEMS.register("pintium_axe", () -> new AxeItem(CustomPintiumTiers.PINTIUM, 8, -2.6f, new Item.Properties().maxStackSize(1).group(PintiumItemGroup.PINTIUM_TAB).isImmuneToFire()));
     public static final RegistryObject<Item> PINTIUM_SHOVEL = ITEMS.register("pintium_shovel", () -> new ShovelItem(CustomPintiumTiers.PINTIUM, 3, -2.6f, new Item.Properties().maxStackSize(1).group(PintiumItemGroup.PINTIUM_TAB).isImmuneToFire()));
     public static final RegistryObject<Item> PINTIUM_HOE = ITEMS.register("pintium_hoe", () -> new HoeItem(CustomPintiumTiers.PINTIUM, -5, 0.0f, new Item.Properties().maxStackSize(1).group(PintiumItemGroup.PINTIUM_TAB).isImmuneToFire()));
-
+    public static final RegistryObject<Item> PINTIUM_HAMMER = ITEMS.register("pintium_hammer", () -> new PintiumHammer(new Item.Properties().maxStackSize(1).group(PintiumItemGroup.PINTIUM_TAB).isImmuneToFire()));
+    
     public static final RegistryObject<Item> PINTIUM_HELMET = ITEMS.register("pintium_helmet", () -> new ArmorItem(CustomPintiumArmorMaterials.PINTIUM_ARMOR, EquipmentSlotType.HEAD, new Item.Properties().group(PintiumItemGroup.PINTIUM_TAB).maxStackSize(1).isImmuneToFire()));
     public static final RegistryObject<Item> PINTIUM_CHESTPLATE = ITEMS.register("pintium_chestplate", () -> new ArmorItem(CustomPintiumArmorMaterials.PINTIUM_ARMOR, EquipmentSlotType.CHEST, new Item.Properties().group(PintiumItemGroup.PINTIUM_TAB).maxStackSize(1).isImmuneToFire()));
     public static final RegistryObject<Item> PINTIUM_LEGGINGS = ITEMS.register("pintium_leggings", () -> new ArmorItem(CustomPintiumArmorMaterials.PINTIUM_ARMOR, EquipmentSlotType.LEGS, new Item.Properties().group(PintiumItemGroup.PINTIUM_TAB).maxStackSize(1).isImmuneToFire()));

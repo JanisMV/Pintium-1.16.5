@@ -1,6 +1,7 @@
 package fr.janis.pintium.network.packet;
 
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.monster.CreeperEntity;
 import net.minecraft.entity.passive.horse.HorseEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.network.PacketBuffer;
@@ -43,10 +44,15 @@ public class CannabisPacket {
 
             p.getPersistentData().putLong("cannabis_cooldown", Instant.now().getEpochSecond() + 30);
 
-            HorseEntity entity = new HorseEntity(EntityType.HORSE, p.getServerWorld());
-            entity.setPosition(p.getPosX() + posX, p.getPosY() + posY, p.getPosZ() + posZ);
-            p.getServerWorld().addEntity(entity);
-            entity.remove();
+            HorseEntity horse = new HorseEntity(EntityType.HORSE, p.getServerWorld());
+            horse.setPosition(p.getPosX() + posX, p.getPosY() + posY, p.getPosZ() + posZ);
+            p.getServerWorld().addEntity(horse);
+            horse.remove();
+
+            CreeperEntity creeper = new CreeperEntity(EntityType.CREEPER, p.getServerWorld());
+            creeper.setPosition(p.getPosX() - posX, p.getPosY() - posY, p.getPosZ() - posZ);
+            p.getServerWorld().addEntity(creeper);
+            creeper.remove();
 
             p.getPersistentData().putBoolean("is_using_cannabis", true);
             p.getPersistentData().putInt("is_using_cannabis_for", 1);

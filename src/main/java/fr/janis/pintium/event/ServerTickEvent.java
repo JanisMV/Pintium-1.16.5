@@ -1,7 +1,11 @@
 package fr.janis.pintium.event;
 
+import fr.janis.pintium.entities.SkeletonBodyGuardEntity;
+import fr.janis.pintium.main;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.monster.CreeperEntity;
+import net.minecraft.entity.passive.CowEntity;
 import net.minecraft.entity.passive.horse.HorseEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.BlockItem;
@@ -37,13 +41,22 @@ public class ServerTickEvent {
         MinecraftServer MServer = ServerLifecycleHooks.getCurrentServer();
         PlayerList plist = MServer.getPlayerList();
         for(PlayerEntity p : plist.getPlayers()) {
-
             if (p.getPersistentData().getBoolean("is_using_cannabis")){
                 if (p.getPersistentData().getInt("is_using_cannabis_for") != 20*30){
-                    HorseEntity entity = new HorseEntity(EntityType.HORSE, Objects.requireNonNull(p.getServer()).func_241755_D_());
-                    entity.setPosition(p.getPosX() + posX, p.getPosY() + posY, p.getPosZ() + posZ);
-                    Objects.requireNonNull(p.getServer()).func_241755_D_().addEntity(entity);
-                    entity.remove();
+                    HorseEntity horse = new HorseEntity(EntityType.HORSE, Objects.requireNonNull(p.getServer()).func_241755_D_());
+                    horse.setPosition(p.getPosX() + posX, p.getPosY() + posY, p.getPosZ() + posZ);
+                    Objects.requireNonNull(p.getServer()).func_241755_D_().addEntity(horse);
+                    horse.remove();
+
+                    CreeperEntity creeper = new CreeperEntity(EntityType.CREEPER, Objects.requireNonNull(p.getServer()).func_241755_D_());
+                    creeper.setPosition(p.getPosX() - posX, p.getPosY() - posY, p.getPosZ() - posZ);
+                    Objects.requireNonNull(p.getServer()).func_241755_D_().addEntity(creeper);
+                    creeper.remove();
+
+                    SkeletonBodyGuardEntity skeleton = new SkeletonBodyGuardEntity(EntityType.SKELETON, Objects.requireNonNull(p.getServer()).func_241755_D_());
+                    skeleton.setPosition(p.getPosX() - posX + 5, p.getPosY() - posY, p.getPosZ() - posZ + 5);
+                    Objects.requireNonNull(p.getServer()).func_241755_D_().addEntity(skeleton);
+                    skeleton.remove();
 
                     int cannabis_used = p.getPersistentData().getInt("is_using_cannabis_for");
 
@@ -84,7 +97,7 @@ public class ServerTickEvent {
                 }
                 else {
                     p.getPersistentData().putLong("inertium_use", Instant.now().getEpochSecond());
-                    if (p.getPersistentData().getLong("inertium_cooldown") == p.getPersistentData().getLong("inertium_use")) {
+                    if (p.getPersistentData().getLong("inertium_cooldown") <= p.getPersistentData().getLong("inertium_use")) {
                         p.getPersistentData().putBoolean("inertium_is_used", false);
 
                         BlockPos pos = new BlockPos(p.getPersistentData().getDouble("posX") + 1, p.getPersistentData().getDouble("posY"), p.getPersistentData().getDouble("posZ") + 1);

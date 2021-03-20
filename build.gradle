@@ -13,7 +13,7 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '0.2c'
+version = '0.3a'
 group = 'fr.janis.pintium' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'PINTIUM'
 

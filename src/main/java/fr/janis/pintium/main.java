@@ -23,15 +23,11 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 
-// MorphIntoMob
-// Gravity Gun
 // Système de level
 // Ajouter des structures
 // Créer un disque avec des musiques
 // Inertium si inventaire full et armure, armure perdue :sob:
-// Quand Cannabis consommé direction du joueur changé + craft impossible + rajouter des animaux à la vision
 // Modifier loot Hautes Herbes (Global Loot Modifier), Et mettre une proba d'avoir des graines
-// Rajouter Boss qui se build comme le wither avec new mob + new block
 
 @Mod(main.MODID)
 public class main
@@ -50,7 +46,6 @@ public class main
         PintiumBlocks.BLOCKS.register(bus);
         PintiumTileEntities.TILE_ENTITIES.register(bus);
         PintiumEntities.ENTITY_TYPES.register(bus);
-
     }
 
     private void setup(FMLCommonSetupEvent e){

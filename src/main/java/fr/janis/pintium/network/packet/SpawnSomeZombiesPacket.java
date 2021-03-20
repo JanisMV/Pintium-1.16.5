@@ -1,5 +1,8 @@
 package fr.janis.pintium.network.packet;
 
+import fr.janis.pintium.entities.ZombieBodyGuardEntity;
+import fr.janis.pintium.init.PintiumEntities;
+import net.minecraft.entity.EntityType;
 import net.minecraft.entity.monster.ZombieEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.network.PacketBuffer;
@@ -40,13 +43,12 @@ public class SpawnSomeZombiesPacket {
             int i;
             for (i = 0; i < 5; i++) {
 
-                ZombieEntity entity = new ZombieEntity(p.getServerWorld());
+                ZombieBodyGuardEntity entity = new ZombieBodyGuardEntity(PintiumEntities.ZOMBIE_BODY_GUARD.get(), p.getServerWorld());
                 entity.setPosition(p.getPosX(), p.getPosY(), p.getPosZ());
                 entity.setCustomName(new TranslationTextComponent("pintium.guispells.zombium.zombieName"));
                 entity.setChild(true);
                 entity.setAttackTarget(p.getLastAttackedEntity());
                 p.getServerWorld().addEntity(entity);
-
             }
             ctxProvider.get().setPacketHandled(true);
         }

@@ -38,15 +38,19 @@ public class SpellsGui extends Screen {
 
         this.addButton(new Button(guiLeft  + (xSize/2) - 70, guiTop + (ySize/2) - 10, 150, 20, new TranslationTextComponent("pintium.guispells.button.navis.title"), button -> {
             Network.CHANNEL.sendToServer(new SpawnABoatPacket());
+            this.closeScreen();
         }));
-        this.addButton(new Button(guiLeft + (xSize/2) - 70, guiTop, 150, 20, new TranslationTextComponent("pintium.guispells.button.inertium.title"), button -> {
+        this.addButton(new Button(guiLeft + (xSize/2) - 70, guiTop + 5, 150, 20, new TranslationTextComponent("pintium.guispells.button.inertium.title"), button -> {
             Network.CHANNEL.sendToServer(new TransformToABlockPacket());
+            this.closeScreen();
         }));
         this.addButton(new Button(guiLeft + (xSize/2) - 70, guiTop + 123, 150, 20, new TranslationTextComponent("pintium.guispells.button.zombium.title"), button -> {
             Network.CHANNEL.sendToServer(new SpawnSomeZombiesPacket());
+            this.closeScreen();
         }));
         this.addButton(new Button(guiLeft + (xSize/2) - 70, guiTop + 30, 150, 20, new TranslationTextComponent("pintium.guispells.button.ignis.title"), button -> {
             Network.CHANNEL.sendToServer(new LaunchFireBall());
+            this.closeScreen();
         }));
     }
 
