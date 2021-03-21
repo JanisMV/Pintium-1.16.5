@@ -22,7 +22,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-
+// Prochaine Maj : Plus de Mobs Tameable + Structure
 // Système de level
 // Ajouter des structures
 // Créer un disque avec des musiques

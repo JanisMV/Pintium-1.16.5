@@ -44,6 +44,12 @@
               }
             }
           ],
+          "conditions": [
+            {
+              "condition": "random_chance",
+              "chance": 0.75
+            }
+          ],
           "name": "pintium:pintium_seeds"
         }
       ],

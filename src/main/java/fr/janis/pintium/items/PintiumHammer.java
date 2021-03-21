@@ -41,7 +41,6 @@ public class PintiumHammer extends PickaxeItem {
     public boolean onBlockDestroyed(ItemStack stack, World worldIn, BlockState state, BlockPos pos, LivingEntity entityLiving) {
 
         if (entityLiving.getHorizontalFacing() == Direction.NORTH || entityLiving.getHorizontalFacing() == Direction.SOUTH){
-
             BlockPos pos1 = new BlockPos(pos.getX() + 1, pos.getY(), pos.getZ());
             BlockPos pos2 = new BlockPos(pos.getX() - 1, pos.getY(), pos.getZ());
             BlockPos pos3 = new BlockPos(pos.getX(), pos.getY() + 1, pos.getZ());

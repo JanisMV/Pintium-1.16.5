@@ -1,6 +1,5 @@
 package fr.janis.pintium.init;
 
-import fr.janis.pintium.entities.RatelEntity;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.WorldGenRegistries;
@@ -14,8 +13,6 @@ import net.minecraft.world.gen.feature.OreFeatureConfig;
 import net.minecraftforge.common.world.BiomeGenerationSettingsBuilder;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLLoadCompleteEvent;
-import net.minecraftforge.registries.ForgeRegistries;
 
 public class PintiumFeatures {
 
@@ -58,12 +55,12 @@ public class PintiumFeatures {
 
         else {
             if (e.getCategory() != Biome.Category.OCEAN && e.getCategory() != Biome.Category.RIVER){
-                e.getSpawns().getSpawner(EntityClassification.MONSTER).add(new MobSpawnInfo.Spawners(PintiumEntities.RATEL.get(), 10, 5, 20));
-                e.getSpawns().getSpawner(EntityClassification.CREATURE).add(new MobSpawnInfo.Spawners(PintiumEntities.BANANOSAUR.get(), 3, 1, 20));
+                e.getSpawns().getSpawner(EntityClassification.MONSTER).add(new MobSpawnInfo.Spawners(PintiumEntities.RATEL.get(), 3, 5, 5));
+                e.getSpawns().getSpawner(EntityClassification.CREATURE).add(new MobSpawnInfo.Spawners(PintiumEntities.BANANOSAUR.get(), 1, 1, 5));
             }
             else {
-                e.getSpawns().getSpawner(EntityClassification.WATER_CREATURE).add(new MobSpawnInfo.Spawners(PintiumEntities.TUNA.get(), 20, 5, 20));
-                e.getSpawns().getSpawner(EntityClassification.WATER_CREATURE).add(new MobSpawnInfo.Spawners(PintiumEntities.BANANOFISH.get(), 20, 5, 20));
+                e.getSpawns().getSpawner(EntityClassification.WATER_CREATURE).add(new MobSpawnInfo.Spawners(PintiumEntities.TUNA.get(), 5, 5, 5));
+                e.getSpawns().getSpawner(EntityClassification.WATER_CREATURE).add(new MobSpawnInfo.Spawners(PintiumEntities.BANANOFISH.get(), 5, 5, 5));
             }
         }
     }
