@@ -8,7 +8,6 @@ import org.lwjgl.glfw.GLFW;
 
 public class KeyBinds {
     public static final KeyBinding SPELLS = new KeyBinding("key.spells", KeyConflictContext.UNIVERSAL, InputMappings.Type.KEYSYM, GLFW.GLFW_KEY_K, "key.categories.pintium");
-
     public static void register()
     {
         ClientRegistry.registerKeyBinding(SPELLS);

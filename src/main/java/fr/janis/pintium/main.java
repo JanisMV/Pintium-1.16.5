@@ -1,7 +1,7 @@
 package fr.janis.pintium;
 
 import fr.janis.pintium.data.CapabilityEntityKilled;
-import fr.janis.pintium.data.CapabilityEntityKilledEventHandler;
+import fr.janis.pintium.data.CapabilityEventHandler;
 import fr.janis.pintium.data.onEntityDeathEvent;
 import fr.janis.pintium.entities.*;
 import fr.janis.pintium.event.*;
@@ -22,8 +22,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-// Prochaine Maj : Plus de Mobs Tameable + Structure
-// Système de level
+// Prochaine Maj : Plus de Mobs Tameable + Fix animation thon
 // Ajouter des structures
 // Créer un disque avec des musiques
 // Inertium si inventaire full et armure, armure perdue :sob:
@@ -75,7 +74,7 @@ public class main
         MinecraftForge.EVENT_BUS.register(new ServerTickEvent());
         MinecraftForge.EVENT_BUS.register(new UsedItemEvent());
         MinecraftForge.EVENT_BUS.register(new onEntityDeathEvent());
-        MinecraftForge.EVENT_BUS.register(CapabilityEntityKilledEventHandler.class);
+        MinecraftForge.EVENT_BUS.register(new CapabilityEventHandler());
 
         KeyBinds.register();
 

@@ -52,16 +52,30 @@ public class LifeStick extends Item {
                     if (playerIn.inventory.hasItemStack(new ItemStack(PintiumItems.HEAL_ORB.get()))) {
                         playerIn.inventory.deleteStack(new ItemStack(PintiumItems.HEAL_ORB.get()));
 
+                        String text = new TranslationTextComponent("pintium.life_stick.entity_revived").getString() + "ratel !";
+                        playerIn.sendStatusMessage(ITextComponent.getTextComponentOrEmpty((text)), true);
+
                         Network.CHANNEL.sendToServer(new TameRatelPacket());
                         h.setName(null);
+                    }
+                    else {
+                        String text = new TranslationTextComponent("pintium.life_stick.no_orb").getString();
+                        playerIn.sendStatusMessage(ITextComponent.getTextComponentOrEmpty((text)), true);
                     }
                 }
                 else if (h.getName().equals(EntityType.ZOMBIE.getName().getString())){
                     if (playerIn.inventory.hasItemStack(new ItemStack(PintiumItems.HEAL_ORB.get()))) {
                         playerIn.inventory.deleteStack(new ItemStack(PintiumItems.HEAL_ORB.get()));
 
+                        String text = new TranslationTextComponent("pintium.life_stick.entity_revived").getString() + "zombie !";
+                        playerIn.sendStatusMessage(ITextComponent.getTextComponentOrEmpty((text)), true);
+
                         Network.CHANNEL.sendToServer(new TameZombiePacket());
                         h.setName(null);
+                    }
+                    else {
+                        String text = new TranslationTextComponent("pintium.life_stick.no_orb").getString();
+                        playerIn.sendStatusMessage(ITextComponent.getTextComponentOrEmpty((text)), true);
                     }
                 }
 
@@ -69,8 +83,15 @@ public class LifeStick extends Item {
                     if (playerIn.inventory.hasItemStack(new ItemStack(PintiumItems.HEAL_ORB.get()))){
                         playerIn.inventory.deleteStack(new ItemStack(PintiumItems.HEAL_ORB.get()));
 
+                        String text = new TranslationTextComponent("pintium.life_stick.entity_revived").getString() + "skeleton !";
+                        playerIn.sendStatusMessage(ITextComponent.getTextComponentOrEmpty((text)), true);
+
                         Network.CHANNEL.sendToServer(new TameSkeletonPacket());
                         h.setName(null);
+                    }
+                    else {
+                        String text = new TranslationTextComponent("pintium.life_stick.no_orb").getString();
+                        playerIn.sendStatusMessage(ITextComponent.getTextComponentOrEmpty((text)), true);
                     }
                 }
                 
@@ -78,10 +99,23 @@ public class LifeStick extends Item {
                     if (playerIn.inventory.hasItemStack(new ItemStack(PintiumItems.HEAL_ORB.get()))){
                         playerIn.inventory.deleteStack(new ItemStack(PintiumItems.HEAL_ORB.get()));
 
+                        String text = new TranslationTextComponent("pintium.life_stick.entity_revived").getString() + "creeper !";
+                        playerIn.sendStatusMessage(ITextComponent.getTextComponentOrEmpty((text)), true);
+
                         Network.CHANNEL.sendToServer(new TameCreeperPacket());
                         h.setName(null);
                     }
+                    else {
+                        String text = new TranslationTextComponent("pintium.life_stick.no_orb").getString();
+                        playerIn.sendStatusMessage(ITextComponent.getTextComponentOrEmpty((text)), true);
+                    }
                 }
+
+            }
+
+            else {
+                String text = new TranslationTextComponent("pintium.life_stick.cannot_revive").getString();
+                playerIn.sendStatusMessage(ITextComponent.getTextComponentOrEmpty((text)), true);
             }
         });
 

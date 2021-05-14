@@ -25,7 +25,6 @@ public class BananosaurEntity extends AnimalEntity {
 
     public BananosaurEntity(EntityType<? extends AnimalEntity> type, World worldIn) {
         super(type, worldIn);
-        //EntitySpawnPlacementRegistry.register(PintiumEntities.RATEL.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, AnimalEntity::canAnimalSpawn);
     }
 
     // registerAttributes

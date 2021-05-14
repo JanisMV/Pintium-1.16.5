@@ -26,16 +26,15 @@ public class RatelEntity extends MonsterEntity {
 
     public RatelEntity(EntityType<? extends MonsterEntity> type, World worldIn) {
         super(type, worldIn);
-        //EntitySpawnPlacementRegistry.register(PintiumEntities.RATEL.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, AnimalEntity::canAnimalSpawn);
     }
 
     // registerAttributes
     public static AttributeModifierMap.MutableAttribute setCustomAttributes(){
         return MobEntity.func_233666_p_()
-                .createMutableAttribute(Attributes.MAX_HEALTH, 30.0D)
+                .createMutableAttribute(Attributes.MAX_HEALTH, 15.0D)
                 .createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.50D)
-                .createMutableAttribute(Attributes.ATTACK_DAMAGE, 7)
-                .createMutableAttribute(Attributes.ATTACK_SPEED, 1)
+                .createMutableAttribute(Attributes.ATTACK_DAMAGE, 3)
+                .createMutableAttribute(Attributes.ATTACK_SPEED, 0.5)
                 .createMutableAttribute(Attributes.KNOCKBACK_RESISTANCE, 0);
     }
 

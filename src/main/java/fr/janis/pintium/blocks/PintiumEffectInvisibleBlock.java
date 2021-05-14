@@ -12,6 +12,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
 import net.minecraft.command.impl.EffectCommand;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.BlockItem;
 import net.minecraft.potion.*;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ActionResultType;
@@ -42,7 +43,6 @@ public class PintiumEffectInvisibleBlock extends Block {
 
     @Override
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
-
         if(worldIn.getTileEntity(pos) instanceof TileEntityPintiumEffectInvisibleBlock){
             TileEntityPintiumEffectInvisibleBlock tileEntity = (TileEntityPintiumEffectInvisibleBlock) worldIn.getTileEntity(pos);
 

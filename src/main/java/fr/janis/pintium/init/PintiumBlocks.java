@@ -1,7 +1,5 @@
 package fr.janis.pintium.init;
-import fr.janis.pintium.blocks.BananaBlock;
-import fr.janis.pintium.blocks.PintiumBlock;
-import fr.janis.pintium.blocks.PintiumEffectInvisibleBlock;
+import fr.janis.pintium.blocks.*;
 import fr.janis.pintium.main;
 
 import fr.janis.pintium.utils.PintiumItemGroup;
@@ -9,6 +7,7 @@ import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.tileentity.TileEntityType;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -19,6 +18,7 @@ import java.util.function.Supplier;
 public class PintiumBlocks {
 
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, main.MODID);
+    private static final DeferredRegister<TileEntityType<?>> TILES = DeferredRegister.create(ForgeRegistries.TILE_ENTITIES, main.MODID);
 
     public static final RegistryObject<Block> PINTIUM_BLOCK = createBlock("pintium_block", PintiumBlock::new);
 
@@ -28,7 +28,7 @@ public class PintiumBlocks {
 
     public static final RegistryObject<Block> PINTIUM_OVERWORLD_ORE = createBlock("pintium_overworld_ore", () -> new Block(AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(4f, 15f).harvestTool(ToolType.PICKAXE).harvestLevel(2).setRequiresTool().sound(SoundType.STONE)));
     public static final RegistryObject<Block> PINTIUM_NETHER_ORE = createBlock("pintium_nether_ore", () -> new Block(AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(4f, 15f).harvestTool(ToolType.PICKAXE).harvestLevel(2).setRequiresTool().sound(SoundType.STONE)));
-
+    
     public static final RegistryObject<Block> PINTIUM_CROP =
             BLOCKS.register("pintium_crop", () -> new PintiumCrop(AbstractBlock.Properties.from(Blocks.WHEAT)));
 

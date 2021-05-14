@@ -1,15 +1,15 @@
-Args: "--clean", "C:\Users\Win10\.gradle\caches\forge_gradle\mcp_repo\net\minecraft\joined\1.16.5-20210115.111550\joined-1.16.5-20210115.111550-srg.jar", "--output", "C:\Users\Win10\.gradle\caches\forge_gradle\minecraft_user_repo\net\minecraftforge\forge\1.16.5-36.1.0\forge-1.16.5-36.1.0-binpatched.jar", "--apply", "C:\Users\Win10\.gradle\caches\forge_gradle\minecraft_user_repo\net\minecraftforge\forge\1.16.5-36.1.0\forge-1.16.5-36.1.0-binpatches.lzma"
+Args: "--clean", "C:\Users\Win10\.gradle\caches\forge_gradle\mcp_repo\net\minecraft\joined\1.16.5-20210115.111550\joined-1.16.5-20210115.111550-srg.jar", "--output", "C:\Users\Win10\.gradle\caches\forge_gradle\minecraft_user_repo\net\minecraftforge\forge\1.16.5-36.1.18\forge-1.16.5-36.1.18-binpatched.jar", "--apply", "C:\Users\Win10\.gradle\caches\forge_gradle\minecraft_user_repo\net\minecraftforge\forge\1.16.5-36.1.18\forge-1.16.5-36.1.18-binpatches.lzma"
 Classpath: C:\Users\Win10\.gradle\caches\forge_gradle\maven_downloader\net\minecraftforge\binarypatcher\1.0.12\binarypatcher-1.0.12-fatjar.jar
 WorkDir: C:\Users\Win10\Desktop\Pintium\build\_applyBinpatches_2
 Main: net.minecraftforge.binarypatcher.ConsoleTool
 ====================================
 Applying: 
   Clean:     C:\Users\Win10\.gradle\caches\forge_gradle\mcp_repo\net\minecraft\joined\1.16.5-20210115.111550\joined-1.16.5-20210115.111550-srg.jar
-  Output:    C:\Users\Win10\.gradle\caches\forge_gradle\minecraft_user_repo\net\minecraftforge\forge\1.16.5-36.1.0\forge-1.16.5-36.1.0-binpatched.jar
+  Output:    C:\Users\Win10\.gradle\caches\forge_gradle\minecraft_user_repo\net\minecraftforge\forge\1.16.5-36.1.18\forge-1.16.5-36.1.18-binpatched.jar
   KeepData:  false
   Unpatched: false
-  Patches:   C:\Users\Win10\.gradle\caches\forge_gradle\minecraft_user_repo\net\minecraftforge\forge\1.16.5-36.1.0\forge-1.16.5-36.1.0-binpatches.lzma
-Loading patches file: C:\Users\Win10\.gradle\caches\forge_gradle\minecraft_user_repo\net\minecraftforge\forge\1.16.5-36.1.0\forge-1.16.5-36.1.0-binpatches.lzma
+  Patches:   C:\Users\Win10\.gradle\caches\forge_gradle\minecraft_user_repo\net\minecraftforge\forge\1.16.5-36.1.18\forge-1.16.5-36.1.18-binpatches.lzma
+Loading patches file: C:\Users\Win10\.gradle\caches\forge_gradle\minecraft_user_repo\net\minecraftforge\forge\1.16.5-36.1.18\forge-1.16.5-36.1.18-binpatches.lzma
   Reading patch com.mojang.blaze3d.platform.GlStateManager$1.binpatch
     Checksum: 37bccb56 Exists: true
   Reading patch com.mojang.blaze3d.platform.GlStateManager$AlphaState.binpatch
@@ -278,6 +278,10 @@ Loading patches file: C:\Users\Win10\.gradle\caches\forge_gradle\minecraft_user_
     Checksum: dd96e924 Exists: true
   Reading patch net.minecraft.block.TrapDoorBlock.binpatch
     Checksum: a660d08f Exists: true
+  Reading patch net.minecraft.block.TripWireHookBlock$1.binpatch
+    Checksum: d499ff4 Exists: true
+  Reading patch net.minecraft.block.TripWireHookBlock.binpatch
+    Checksum: 5c19d974 Exists: true
   Reading patch net.minecraft.block.TurtleEggBlock.binpatch
     Checksum: 228ce0c7 Exists: true
   Reading patch net.minecraft.block.VineBlock$1.binpatch
@@ -840,6 +844,10 @@ Loading patches file: C:\Users\Win10\.gradle\caches\forge_gradle\minecraft_user_
     Checksum: 43ae7624 Exists: true
   Reading patch net.minecraft.command.impl.LocateCommand.binpatch
     Checksum: 62c4aabb Exists: true
+  Reading patch net.minecraft.command.impl.SpreadPlayersCommand$Position.binpatch
+    Checksum: d3ac1c91 Exists: true
+  Reading patch net.minecraft.command.impl.SpreadPlayersCommand.binpatch
+    Checksum: 47626221 Exists: true
   Reading patch net.minecraft.command.impl.TeleportCommand$Facing.binpatch
     Checksum: ea8c3e87 Exists: true
   Reading patch net.minecraft.command.impl.TeleportCommand.binpatch
@@ -1496,6 +1504,8 @@ Loading patches file: C:\Users\Win10\.gradle\caches\forge_gradle\minecraft_user_
     Checksum: 54cbf717 Exists: true
   Reading patch net.minecraft.item.BucketItem.binpatch
     Checksum: fd17e11f Exists: true
+  Reading patch net.minecraft.item.ChorusFruitItem.binpatch
+    Checksum: 4b889cdc Exists: true
   Reading patch net.minecraft.item.DyeColor.binpatch
     Checksum: a352f8ad Exists: true
   Reading patch net.minecraft.item.DyeableHorseArmorItem.binpatch
@@ -2509,6 +2519,7 @@ Processing: C:\Users\Win10\.gradle\caches\forge_gradle\mcp_repo\net\minecraft\jo
   Patching net/minecraft/block/WebBlock 1/1
   Patching net/minecraft/block/VineBlock 1/1
   Patching net/minecraft/block/TurtleEggBlock 1/1
+  Patching net/minecraft/block/TripWireHookBlock 1/1
   Patching net/minecraft/block/TrapDoorBlock 1/1
   Patching net/minecraft/block/TNTBlock 1/1
   Patching net/minecraft/block/TallSeaGrassBlock 1/1
@@ -2657,6 +2668,7 @@ Processing: C:\Users\Win10\.gradle\caches\forge_gradle\mcp_repo\net\minecraft\jo
   Patching net/minecraft/item/DyeColor 1/1
   Patching net/minecraft/item/ToolItem 1/1
   Patching net/minecraft/item/ItemGroup 1/1
+  Patching net/minecraft/item/ChorusFruitItem 1/1
   Patching net/minecraft/item/BucketItem 1/1
   Patching net/minecraft/item/BowItem 1/1
   Patching net/minecraft/item/BoneMealItem 1/1
@@ -2946,6 +2958,7 @@ Processing: C:\Users\Win10\.gradle\caches\forge_gradle\mcp_repo\net\minecraft\jo
   Patching net/minecraft/entity/monster/EvokerEntity$CastingSpellGoal 1/1
   Patching net/minecraft/entity/monster/EvokerEntity$AttackSpellGoal 1/1
   Patching net/minecraft/client/MainWindow$1 1/1
+  Patching net/minecraft/command/impl/SpreadPlayersCommand$Position 1/1
   Patching net/minecraft/entity/monster/EvokerEntity$1 1/1
   Patching net/minecraft/util/math/shapes/EntitySelectionContext$1 1/1
   Patching net/minecraft/client/ClientBrandRetriever 1/1
@@ -3019,6 +3032,7 @@ Processing: C:\Users\Win10\.gradle\caches\forge_gradle\mcp_repo\net\minecraft\jo
   Patching net/minecraft/client/renderer/chunk/ChunkRenderDispatcher$CompiledChunk 1/1
   Patching net/minecraft/client/renderer/chunk/ChunkRenderDispatcher$ChunkTaskResult 1/1
   Patching net/minecraft/item/crafting/CookingRecipeSerializer$IFactory 1/1
+  Patching net/minecraft/block/TripWireHookBlock$1 1/1
   Patching net/minecraft/client/gui/ScreenManager$IScreenFactory 1/1
   Patching net/minecraft/block/NetherPortalBlock$1 1/1
   Patching net/minecraft/client/renderer/texture/TextureAtlasSprite$InterpolationData 1/1
@@ -3277,6 +3291,7 @@ Processing: C:\Users\Win10\.gradle\caches\forge_gradle\mcp_repo\net\minecraft\jo
   Patching net/minecraft/server/dedicated/ServerHangWatchdog 1/1
   Patching net/minecraft/server/dedicated/DedicatedServer 1/1
   Patching net/minecraft/command/impl/TeleportCommand 1/1
+  Patching net/minecraft/command/impl/SpreadPlayersCommand 1/1
   Patching net/minecraft/command/impl/TeleportCommand$Facing 1/1
   Patching net/minecraft/command/impl/LocateCommand 1/1
   Patching net/minecraft/world/biome/Biome$TemperatureModifier$2 1/1

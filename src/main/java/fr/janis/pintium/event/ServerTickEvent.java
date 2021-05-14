@@ -1,13 +1,11 @@
 package fr.janis.pintium.event;
 
 import fr.janis.pintium.entities.SkeletonBodyGuardEntity;
-import fr.janis.pintium.main;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.monster.CreeperEntity;
-import net.minecraft.entity.passive.CowEntity;
 import net.minecraft.entity.passive.horse.HorseEntity;
-import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -40,7 +38,7 @@ public class ServerTickEvent {
 
         MinecraftServer MServer = ServerLifecycleHooks.getCurrentServer();
         PlayerList plist = MServer.getPlayerList();
-        for(PlayerEntity p : plist.getPlayers()) {
+        for(ServerPlayerEntity p : plist.getPlayers()) {
             if (p.getPersistentData().getBoolean("is_using_cannabis")){
                 if (p.getPersistentData().getInt("is_using_cannabis_for") != 20*30){
                     HorseEntity horse = new HorseEntity(EntityType.HORSE, Objects.requireNonNull(p.getServer()).func_241755_D_());
