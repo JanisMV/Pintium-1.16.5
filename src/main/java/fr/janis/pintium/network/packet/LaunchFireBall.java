@@ -7,6 +7,8 @@ import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.projectile.FireballEntity;
 import net.minecraft.network.PacketBuffer;
 import net.minecraft.util.math.vector.Vector3d;
+import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraftforge.fml.network.NetworkEvent;
 
 import java.time.Instant;
@@ -56,6 +58,10 @@ public class LaunchFireBall {
             p.getServerWorld().addEntity(fireballentity);
 
             ctxProvider.get().setPacketHandled(true);
+        }
+        else {
+            String text = new TranslationTextComponent("pintium.guispells.cooldown_not_finished1").getString() + (p.getPersistentData().getLong("ignis_cooldown") - p.getPersistentData().getLong("ignis_use")) + new TranslationTextComponent("pintium.guispells.cooldown_not_finished2").getString();
+            p.sendStatusMessage(ITextComponent.getTextComponentOrEmpty((text)), true);
         }
     }
 }

@@ -48,6 +48,19 @@ public class TunaModel<T extends TunaEntity> extends EntityModel<T> {
         body_back.setRotationPoint(0.0F, 18.0F, 4.0F);
         body_back.setTextureOffset(0, 13).addBox(-1.5F, -2.5F, 0.0F, 3.0F, 5.0F, 8.0F, 0.0F, false);
 
+        dick = new ModelRenderer(this);
+        dick.setRotationPoint(0.0F, 6.0F, -4.0F);
+        body_back.addChild(dick);
+        dick.setTextureOffset(0, 0).addBox(0.0F, -4.0F, 10.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+        dick.setTextureOffset(0, 0).addBox(0.0F, -4.0F, 6.0F, 1.0F, 1.0F, 4.0F, 0.0F, false);
+        dick.setTextureOffset(0, 0).addBox(-1.0F, -4.0F, 10.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+        dick.setTextureOffset(0, 0).addBox(1.0F, -4.0F, 10.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+
+        tail = new ModelRenderer(this);
+        tail.setRotationPoint(0.0F, 0.0F, 8.0F);
+        body_back.addChild(tail);
+        tail.setTextureOffset(20, 10).addBox(0.0F, -2.5F, 0.0F, 0.0F, 5.0F, 6.0F, 0.0F, false);
+
         head = new ModelRenderer(this);
         head.setRotationPoint(0.0F, 18.0F, -4.0F);
         head.setTextureOffset(22, 0).addBox(-1.0F, -2.0F, -3.0F, 2.0F, 4.0F, 3.0F, 0.0F, false);
@@ -60,24 +73,12 @@ public class TunaModel<T extends TunaEntity> extends EntityModel<T> {
         fin_back_2.setRotationPoint(0.0F, 13.5F, 3.0F);
         fin_back_2.setTextureOffset(2, 3).addBox(0.0F, 0.0F, 1.0F, 0.0F, 2.0F, 3.0F, 0.0F, false);
 
-        tail = new ModelRenderer(this);
-        tail.setRotationPoint(0.0F, 18.0F, 12.0F);
-        tail.setTextureOffset(20, 10).addBox(0.0F, -2.5F, 0.0F, 0.0F, 5.0F, 6.0F, 0.0F, false);
-
         fin_left = new ModelRenderer(this);
         fin_left.setRotationPoint(0.0F, 24.0F, 0.0F);
 
 
         fin_right = new ModelRenderer(this);
         fin_right.setRotationPoint(0.0F, 24.0F, 0.0F);
-
-
-        dick = new ModelRenderer(this);
-        dick.setRotationPoint(0.0F, 24.0F, 0.0F);
-        dick.setTextureOffset(0, 0).addBox(0.0F, -4.0F, 10.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
-        dick.setTextureOffset(0, 0).addBox(0.0F, -4.0F, 6.0F, 1.0F, 1.0F, 4.0F, 0.0F, false);
-        dick.setTextureOffset(0, 0).addBox(-1.0F, -4.0F, 10.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
-        dick.setTextureOffset(0, 0).addBox(1.0F, -4.0F, 10.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
     }
 
     @Override
@@ -99,10 +100,8 @@ public class TunaModel<T extends TunaEntity> extends EntityModel<T> {
         head.render(matrixStack, buffer, packedLight, packedOverlay);
         fin_back_1.render(matrixStack, buffer, packedLight, packedOverlay);
         fin_back_2.render(matrixStack, buffer, packedLight, packedOverlay);
-        tail.render(matrixStack, buffer, packedLight, packedOverlay);
         fin_left.render(matrixStack, buffer, packedLight, packedOverlay);
         fin_right.render(matrixStack, buffer, packedLight, packedOverlay);
-        dick.render(matrixStack, buffer, packedLight, packedOverlay);
     }
 
     public void setRotationAngle(ModelRenderer modelRenderer, float x, float y, float z) {

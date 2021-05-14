@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Implementation-Title: Pintium
-Implementation-Version: 0.3e
+Implementation-Version: 0.3f
 Specification-Vendor: examplemodsareus
 Specification-Title: examplemod
-Implementation-Timestamp: 2021-05-14T11:14:30+0300
+Implementation-Timestamp: 2021-05-14T21:01:49+0300
 Specification-Version: 1
 Implementation-Vendor: examplemodsareus
 

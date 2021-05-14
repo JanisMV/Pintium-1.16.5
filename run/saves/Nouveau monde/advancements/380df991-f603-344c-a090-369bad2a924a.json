@@ -1,25 +1,8 @@
 {
-  "minecraft:recipes/brewing/golden_carrot": {
-    "criteria": {
-      "has_gold_nugget": "2021-05-13 21:44:09 +0300"
-    },
-    "done": true
-  },
-  "minecraft:recipes/misc/gold_ingot_from_nuggets": {
-    "criteria": {
-      "has_gold_nugget": "2021-05-13 21:44:09 +0300"
-    },
-    "done": true
-  },
-  "minecraft:adventure/root": {
-    "criteria": {
-      "killed_something": "2021-05-13 21:44:09 +0300"
-    },
-    "done": true
-  },
   "minecraft:adventure/adventuring_time": {
     "criteria": {
-      "minecraft:forest": "2021-05-13 21:43:30 +0300"
+      "minecraft:river": "2021-05-14 14:34:01 +0300",
+      "minecraft:plains": "2021-05-14 14:31:38 +0300"
     },
     "done": false
   },

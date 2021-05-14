@@ -10,6 +10,8 @@ import net.minecraft.network.PacketBuffer;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.fml.network.NetworkEvent;
 
@@ -81,6 +83,14 @@ public class TransformToABlockPacket {
                     }
                     ctxProvider.get().setPacketHandled(true);
                 }
+                else {
+                    String text = new TranslationTextComponent("pintium.guispells.inertium.no_block_in_hand").getString();
+                    p.sendStatusMessage(ITextComponent.getTextComponentOrEmpty((text)), true);
+                }
+            }
+            else {
+                String text = new TranslationTextComponent("pintium.guispells.cooldown_not_finished1").getString() + (p.getPersistentData().getLong("inertium_cooldown") - p.getPersistentData().getLong("inertium_use")) + new TranslationTextComponent("pintium.guispells.cooldown_not_finished2").getString();
+                p.sendStatusMessage(ITextComponent.getTextComponentOrEmpty((text)), true);
             }
         ctxProvider.get().setPacketHandled(true);
         }

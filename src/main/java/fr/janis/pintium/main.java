@@ -22,7 +22,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-// Prochaine Maj : Plus de Mobs Tameable + Fix animation thon
+// Prochaine Maj : Plus de Mobs Tameable + Animation Thon + Texte added sur les sorts et life sticks
 // Ajouter des structures
 // Créer un disque avec des musiques
 // Inertium si inventaire full et armure, armure perdue :sob:

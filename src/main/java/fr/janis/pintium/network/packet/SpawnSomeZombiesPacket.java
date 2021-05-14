@@ -52,6 +52,10 @@ public class SpawnSomeZombiesPacket {
             }
             ctxProvider.get().setPacketHandled(true);
         }
+        else {
+            String text = new TranslationTextComponent("pintium.guispells.cooldown_not_finished1").getString() + (p.getPersistentData().getLong("zombium_cooldown") - p.getPersistentData().getLong("zombium_use")) + new TranslationTextComponent("pintium.guispells.cooldown_not_finished2").getString();
+            p.sendStatusMessage(ITextComponent.getTextComponentOrEmpty((text)), true);
+        }
         ctxProvider.get().setPacketHandled(true);
     }
 }
